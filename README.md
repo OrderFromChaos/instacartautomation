@@ -1,0 +1,3 @@
+#instacartautomation
+
+![plan](automationsteps.png)

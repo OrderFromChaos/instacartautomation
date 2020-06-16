@@ -1,3 +1,3 @@
-#instacartautomation
+# instacartautomation
 
 ![plan](automationsteps.png)

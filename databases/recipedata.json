@@ -1,0 +1,1302 @@
+{
+    "Dan Dan Noodles": {
+        "ingredients": {
+            "peanut oil": {
+                "quantity": 1.0,
+                "qtype": "tbsp"
+            },
+            "bacon": {
+                "quantity": 16.0,
+                "qtype": "oz"
+            },
+            "ginger": {
+                "quantity": 3.0,
+                "qtype": "tbsp"
+            },
+            "chicken broth": {
+                "quantity": 1,
+                "qtype": "cups"
+            },
+            "chili sauce": {
+                "quantity": 3.0,
+                "qtype": "tbsp"
+            },
+            "rice vinegar": {
+                "quantity": 1.5,
+                "qtype": "tbsp"
+            },
+            "soy sauce": {
+                "quantity": 3.0,
+                "qtype": "tbsp"
+            },
+            "peanut butter": {
+                "quantity": 3.0,
+                "qtype": "tbsp"
+            },
+            "sichuan peppercorns": {
+                "quantity": 1.5,
+                "qtype": "tsp"
+            },
+            "salt": {
+                "quantity": 1,
+                "qtype": "pinch"
+            },
+            "pepper": {
+                "quantity": 1,
+                "qtype": "pinch"
+            },
+            "egg noodles": {
+                "quantity": 12.0,
+                "qtype": "oz"
+            },
+            "roasted peanuts": {
+                "quantity": 0.5,
+                "qtype": "oz"
+            },
+            "scallions": {
+                "quantity": 4.5,
+                "qtype": ""
+            }
+        }
+    },
+    "Sweet Chili Shrimp": {
+        "ingredients": {
+            "cellophane noodles": {
+                "quantity": 8.0,
+                "qtype": "oz"
+            },
+            "shrimp": {
+                "quantity": 1.0,
+                "qtype": "lb"
+            },
+            "cornstarch": {
+                "quantity": 2.0,
+                "qtype": "tsp"
+            },
+            "salt": {
+                "quantity": 0.5,
+                "qtype": "tsp"
+            },
+            "black pepper": {
+                "quantity": 0.25,
+                "qtype": "tsp"
+            },
+            "soy sauce": {
+                "quantity": 1.0,
+                "qtype": "tbsp"
+            },
+            "honey": {
+                "quantity": 1.0,
+                "qtype": "tbsp"
+            },
+            "rice vinegar": {
+                "quantity": 1.0,
+                "qtype": "tbsp"
+            },
+            "chili sauce": {
+                "quantity": 2.0,
+                "qtype": "tbsp"
+            },
+            "Shaoxing rice wine": {
+                "quantity": 1.0,
+                "qtype": "tbsp"
+            },
+            "peanut oil": {
+                "quantity": 1.0,
+                "qtype": "tbsp"
+            },
+            "minced garlic": {
+                "quantity": 2.0,
+                "qtype": "tbsp"
+            },
+            "ginger": {
+                "quantity": 1.0,
+                "qtype": "tsp"
+            }
+        }
+    },
+    "Shrimp With Lobster Sauce": {
+        "ingredients": {
+            "peanut oil": {
+                "quantity": 2.0,
+                "qtype": "tbsp"
+            },
+            "garlic cloves": {
+                "quantity": 3.0,
+                "qtype": ""
+            },
+            "shrimp": {
+                "quantity": 16.0,
+                "qtype": "oz"
+            },
+            "Shaoxing rice wine": {
+                "quantity": 4.0,
+                "qtype": "tsp"
+            },
+            "chicken broth": {
+                "quantity": 2.0,
+                "qtype": "cups"
+            },
+            "sesame oil": {
+                "quantity": 0.5,
+                "qtype": "tsp"
+            },
+            "sugar": {
+                "quantity": 0.66,
+                "qtype": "tsp"
+            },
+            "salt": {
+                "quantity": 0.66,
+                "qtype": "tsp"
+            },
+            "white": {
+                "quantity": 1,
+                "qtype": "pinch"
+            },
+            "peas": {
+                "quantity": 0.66,
+                "qtype": "cups"
+            },
+            "cornstarch": {
+                "quantity": 4.0,
+                "qtype": "tsp"
+            },
+            "eggs": {
+                "quantity": 2.0,
+                "qtype": ""
+            },
+            "scallions": {
+                "quantity": 2.0,
+                "qtype": ""
+            }
+        }
+    },
+    "Egg Drop Soup": {
+        "ingredients": {
+            "chicken broth": {
+                "quantity": 6.0,
+                "qtype": "cups"
+            },
+            "Shaoxing rice wine": {
+                "quantity": 1.0,
+                "qtype": "tsp"
+            },
+            "ginger": {
+                "quantity": 0.25,
+                "qtype": "tsp"
+            },
+            "sugar": {
+                "quantity": 1.0,
+                "qtype": "tsp"
+            },
+            "white pepper": {
+                "quantity": 0.25,
+                "qtype": "tsp"
+            },
+            "cornstarch": {
+                "quantity": 1.0,
+                "qtype": "tbsp"
+            },
+            "eggs": {
+                "quantity": 2.0,
+                "qtype": ""
+            },
+            "salt": {
+                "quantity": 1,
+                "qtype": "pinch"
+            },
+            "scallions": {
+                "quantity": 1.0,
+                "qtype": ""
+            }
+        }
+    },
+    "Lighter Egg Foo Young": {
+        "ingredients": {
+            "chicken broth": {
+                "quantity": 0.75,
+                "qtype": "cups"
+            },
+            "hoisin sauce": {
+                "quantity": 1.5,
+                "qtype": "tbsp"
+            },
+            "cornstarch": {
+                "quantity": 1.0,
+                "qtype": "tbsp"
+            },
+            "peanut oil": {
+                "quantity": 3.0,
+                "qtype": "tbsp"
+            },
+            "cremini mushrooms": {
+                "quantity": 4.0,
+                "qtype": ""
+            },
+            "scallions": {
+                "quantity": 4.0,
+                "qtype": ""
+            },
+            "bean sprouts": {
+                "quantity": 1.5,
+                "qtype": "cups"
+            },
+            "bacon": {
+                "quantity": 0.25,
+                "qtype": "cups"
+            },
+            "soy sauce": {
+                "quantity": 1.5,
+                "qtype": "tsp"
+            },
+            "eggs": {
+                "quantity": 6.0,
+                "qtype": ""
+            }
+        }
+    },
+    "Vinegar-Glazed Chinese Cabbage": {
+        "ingredients": {
+            "cornstarch": {
+                "quantity": 1.0,
+                "qtype": "tbsp"
+            },
+            "peanut oil": {
+                "quantity": 4.0,
+                "qtype": "tbsp"
+            },
+            "garlic cloves": {
+                "quantity": 3.0,
+                "qtype": ""
+            },
+            "cabbage": {
+                "quantity": 1.0,
+                "qtype": ""
+            },
+            "black vinegar": {
+                "quantity": 3.0,
+                "qtype": "tbsp"
+            },
+            "salt": {
+                "quantity": 1,
+                "qtype": "pinch"
+            }
+        }
+    },
+    "Hot and Sour Vegetable Soup": {
+        "ingredients": {
+            "chicken broth": {
+                "quantity": 4.0,
+                "qtype": "cups"
+            },
+            "soy sauce": {
+                "quantity": 3.0,
+                "qtype": "tbsp"
+            },
+            "bacon": {
+                "quantity": 0.25,
+                "qtype": "cups"
+            },
+            "cremini mushrooms": {
+                "quantity": 0.5,
+                "qtype": "cups"
+            },
+            "garlic chili sauce": {
+                "quantity": 1.0,
+                "qtype": "tbsp"
+            },
+            "white vinegar": {
+                "quantity": 0.25,
+                "qtype": "cups"
+            },
+            "pepper": {
+                "quantity": 0.25,
+                "qtype": "tsp"
+            },
+            "canned bamboo shoots": {
+                "quantity": 0.33,
+                "qtype": "cups"
+            },
+            "tofu": {
+                "quantity": 3.0,
+                "qtype": "oz"
+            },
+            "cornstarch": {
+                "quantity": 1.0,
+                "qtype": "tbsp"
+            },
+            "eggs": {
+                "quantity": 1.0,
+                "qtype": ""
+            },
+            "scallions": {
+                "quantity": 2.0,
+                "qtype": ""
+            },
+            "tsp sesame oil": {
+                "quantity": 0.5,
+                "qtype": ""
+            }
+        }
+    },
+    "Vegetable Egg Rolls": {
+        "ingredients": {
+            "peanut oil": {
+                "quantity": 2.0,
+                "qtype": "tbsp"
+            },
+            "garlic cloves": {
+                "quantity": 2.0,
+                "qtype": ""
+            },
+            "garlic": {
+                "quantity": 1.0,
+                "qtype": "tbsp"
+            },
+            "sweet onion": {
+                "quantity": 0.5,
+                "qtype": ""
+            },
+            "celery stalk": {
+                "quantity": 1.0,
+                "qtype": ""
+            },
+            "carrots": {
+                "quantity": 2.0,
+                "qtype": ""
+            },
+            "cabbage": {
+                "quantity": 0.5,
+                "qtype": ""
+            },
+            "rice vinegar": {
+                "quantity": 2.0,
+                "qtype": "tbsp"
+            },
+            "soy sauce": {
+                "quantity": 1.0,
+                "qtype": "tsp"
+            },
+            "sugar": {
+                "quantity": 1.0,
+                "qtype": "tsp"
+            },
+            "egg roll wrappers": {
+                "quantity": 50.0,
+                "qtype": ""
+            }
+        }
+    },
+    "Pineapple Fried Rice": {
+        "ingredients": {
+            "soy sauce": {
+                "quantity": 3.0,
+                "qtype": "tbsp"
+            },
+            "sesame oil": {
+                "quantity": 1.0,
+                "qtype": "tsp"
+            },
+            "peanut oil": {
+                "quantity": 2.0,
+                "qtype": "tbsp"
+            },
+            "garlic cloves": {
+                "quantity": 2.0,
+                "qtype": ""
+            },
+            "sweet onion": {
+                "quantity": 1.0,
+                "qtype": ""
+            },
+            "carrots": {
+                "quantity": 1.0,
+                "qtype": ""
+            },
+            "sweet corn": {
+                "quantity": 0.5,
+                "qtype": "cups"
+            },
+            "peas": {
+                "quantity": 0.5,
+                "qtype": "cups"
+            },
+            "rice": {
+                "quantity": 3.0,
+                "qtype": "cups"
+            },
+            "pineapple": {
+                "quantity": 2.0,
+                "qtype": "cups"
+            },
+            "bacon": {
+                "quantity": 0.5,
+                "qtype": "cups"
+            },
+            "scallions": {
+                "quantity": 2.0,
+                "qtype": ""
+            },
+            "cashews": {
+                "quantity": 0.25,
+                "qtype": "cups"
+            },
+            "salt": {
+                "quantity": 1,
+                "qtype": "pinch"
+            },
+            "black": {
+                "quantity": 1,
+                "qtype": "pinch"
+            }
+        }
+    },
+    "Easy Vegetable Stir Fry": {
+        "ingredients": {
+            "soy sauce": {
+                "quantity": 4.0,
+                "qtype": "tbsp"
+            },
+            "sugar": {
+                "quantity": 2.0,
+                "qtype": "tbsp"
+            },
+            "peanut oil": {
+                "quantity": 1.0,
+                "qtype": "tbsp"
+            },
+            "ginger": {
+                "quantity": 1.5,
+                "qtype": "tsp"
+            },
+            "cremini mushrooms": {
+                "quantity": 1.0,
+                "qtype": "cups"
+            },
+            "red bell pepper": {
+                "quantity": 1.0,
+                "qtype": ""
+            },
+            "green bell pepper": {
+                "quantity": 1.0,
+                "qtype": ""
+            },
+            "scallions": {
+                "quantity": 2.0,
+                "qtype": ""
+            },
+            "broccoli florets": {
+                "quantity": 1.0,
+                "qtype": "cups"
+            },
+            "green beans": {
+                "quantity": 0.5,
+                "qtype": "cups"
+            }
+        }
+    },
+    "Mango Pudding": {
+        "ingredients": {
+            "mango chunks": {
+                "quantity": 0.5,
+                "qtype": "lb"
+            },
+            "sugar": {
+                "quantity": 0.25,
+                "qtype": "cups"
+            },
+            "packet gelatin": {
+                "quantity": 1.0,
+                "qtype": ""
+            },
+            "evaporated milk": {
+                "quantity": 0.5,
+                "qtype": "cups"
+            },
+            "raspberries": {
+                "quantity": 1,
+                "qtype": "pinch"
+            }
+        }
+    },
+    "Teriyaki Turkey Rice Bowl": {
+        "ingredients": {
+            "soy sauce": {
+                "quantity": 0.5,
+                "qtype": "cups"
+            },
+            "red wine vinegar": {
+                "quantity": 2.0,
+                "qtype": "tbsp"
+            },
+            "sugar": {
+                "quantity": 2.0,
+                "qtype": "tbsp"
+            },
+            "garlic": {
+                "quantity": 2.66,
+                "qtype": "tbsp"
+            },
+            "cornstarch": {
+                "quantity": 1.0,
+                "qtype": "tbsp"
+            },
+            "peanut oil": {
+                "quantity": 1.0,
+                "qtype": "tbsp"
+            },
+            "sweet onion": {
+                "quantity": 0.5,
+                "qtype": "cups"
+            },
+            "ground turkey": {
+                "quantity": 1.0,
+                "qtype": "lb"
+            },
+            "broccoli florets": {
+                "quantity": 1.0,
+                "qtype": "cups"
+            },
+            "carrots": {
+                "quantity": 2.0,
+                "qtype": ""
+            },
+            "scallions": {
+                "quantity": 2.0,
+                "qtype": ""
+            }
+        }
+    },
+    "Chicken and Ginger Noodle Soup": {
+        "ingredients": {
+            "peanut oil": {
+                "quantity": 2.0,
+                "qtype": "tsp"
+            },
+            "garlic": {
+                "quantity": 2.0,
+                "qtype": "tbsp"
+            },
+            "ginger": {
+                "quantity": 0.33,
+                "qtype": "cups"
+            },
+            "cremini mushrooms": {
+                "quantity": 5.0,
+                "qtype": "oz"
+            },
+            "Shaoxing rice wine": {
+                "quantity": 0.5,
+                "qtype": "cups"
+            },
+            "chicken broth": {
+                "quantity": 6.0,
+                "qtype": "cups"
+            },
+            "chicken": {
+                "quantity": 1.5,
+                "qtype": "lb"
+            },
+            "scallions": {
+                "quantity": 5.0,
+                "qtype": ""
+            },
+            "carrots": {
+                "quantity": 3.0,
+                "qtype": ""
+            },
+            "soy sauce": {
+                "quantity": 2.0,
+                "qtype": "tbsp"
+            },
+            "sea": {
+                "quantity": 1,
+                "qtype": "pinch"
+            },
+            "black": {
+                "quantity": 1,
+                "qtype": "pinch"
+            },
+            "rice stick noodles": {
+                "quantity": 0.5,
+                "qtype": "lb"
+            }
+        }
+    },
+    "Braised Pork in Soy Sauce": {
+        "ingredients": {
+            "sugar": {
+                "quantity": 3.0,
+                "qtype": "tbsp"
+            },
+            "honey": {
+                "quantity": 1.0,
+                "qtype": "tbsp"
+            },
+            "soy sauce": {
+                "quantity": 4.0,
+                "qtype": "tbsp"
+            },
+            "peanut oil": {
+                "quantity": 1.0,
+                "qtype": "tbsp"
+            },
+            "ginger": {
+                "quantity": 1.0,
+                "qtype": "tbsp"
+            },
+            "pork shoulder": {
+                "quantity": 1.0,
+                "qtype": "lb"
+            },
+            "cinnamon": {
+                "quantity": 1.0,
+                "qtype": "tsp"
+            },
+            "Shaoxing rice wine": {
+                "quantity": 0.5,
+                "qtype": "cups"
+            }
+        }
+    },
+    "General Tso's Chicken": {
+        "ingredients": {
+            "soy sauce": {
+                "quantity": 3.0,
+                "qtype": "tbsp"
+            },
+            "rice vinegar": {
+                "quantity": 1.0,
+                "qtype": "tbsp"
+            },
+            "honey": {
+                "quantity": 1.5,
+                "qtype": "tbsp"
+            },
+            "sugar": {
+                "quantity": 1.0,
+                "qtype": "tbsp"
+            },
+            "chili sauce": {
+                "quantity": 2.0,
+                "qtype": "tsp"
+            },
+            "chicken broth": {
+                "quantity": 0.75,
+                "qtype": "cups"
+            },
+            "cornstarch": {
+                "quantity": 5.0,
+                "qtype": "tsp"
+            },
+            "sea": {
+                "quantity": 1,
+                "qtype": "pinch"
+            },
+            "black": {
+                "quantity": 1,
+                "qtype": "pinch"
+            },
+            "chicken": {
+                "quantity": 2.0,
+                "qtype": "lb"
+            },
+            "peanut oil": {
+                "quantity": 2.0,
+                "qtype": "tbsp"
+            },
+            "garlic cloves": {
+                "quantity": 2.0,
+                "qtype": ""
+            },
+            "ginger": {
+                "quantity": 2.0,
+                "qtype": "tsp"
+            },
+            "scallions": {
+                "quantity": 4.0,
+                "qtype": ""
+            },
+            "sesame seeds": {
+                "quantity": 1.0,
+                "qtype": "tsp"
+            }
+        }
+    },
+    "Easy Sesame Chicken": {
+        "ingredients": {
+            "chicken": {
+                "quantity": 1.0,
+                "qtype": "lb"
+            },
+            "soy sauce": {
+                "quantity": 2.0,
+                "qtype": "tbsp"
+            },
+            "sesame oil": {
+                "quantity": 2.0,
+                "qtype": "tsp"
+            },
+            "sugar": {
+                "quantity": 1.0,
+                "qtype": "tbsp"
+            },
+            "honey": {
+                "quantity": 1.0,
+                "qtype": "tbsp"
+            },
+            "rice vinegar": {
+                "quantity": 2.0,
+                "qtype": "tbsp"
+            },
+            "ginger": {
+                "quantity": 1.0,
+                "qtype": "tbsp"
+            },
+            "garlic clove": {
+                "quantity": 1.0,
+                "qtype": ""
+            },
+            "eggs": {
+                "quantity": 1.0,
+                "qtype": ""
+            },
+            "cornstarch": {
+                "quantity": 3.0,
+                "qtype": "tbsp"
+            }
+        }
+    },
+    "Breakfast Burrito": {
+        "ingredients": {
+            "butter": {
+                "quantity": 0.5,
+                "qtype": "tbsp"
+            },
+            "sweet onion": {
+                "quantity": 1.0,
+                "qtype": ""
+            },
+            "eggs": {
+                "quantity": 4.0,
+                "qtype": ""
+            },
+            "salt": {
+                "quantity": 1,
+                "qtype": "pinch"
+            },
+            "tortillas": {
+                "quantity": 2.0,
+                "qtype": ""
+            },
+            "shredded cheese": {
+                "quantity": 4.0,
+                "qtype": "tbsp"
+            }
+        }
+    },
+    "Orange French Toast": {
+        "ingredients": {
+            "orange juice": {
+                "quantity": 1.5,
+                "qtype": "cups"
+            },
+            "eggs": {
+                "quantity": 2.0,
+                "qtype": ""
+            },
+            "milk": {
+                "quantity": 0.25,
+                "qtype": "cups"
+            },
+            "cinammon": {
+                "quantity": 0.25,
+                "qtype": "tsp"
+            },
+            "sugar": {
+                "quantity": 0.5,
+                "qtype": "tsp"
+            },
+            "strawberry jam": {
+                "quantity": 0.25,
+                "qtype": "cups"
+            },
+            "butter": {
+                "quantity": 2.0,
+                "qtype": "tsp"
+            },
+            "white bread": {
+                "quantity": 8.0,
+                "qtype": "slices"
+            }
+        }
+    },
+    "Quick Fried Wontons": {
+        "ingredients": {
+            "bacon": {
+                "quantity": 1.0,
+                "qtype": "lb"
+            },
+            "garlic cloves": {
+                "quantity": 2.0,
+                "qtype": ""
+            },
+            "ginger": {
+                "quantity": 1.0,
+                "qtype": "tsp"
+            },
+            "sesame oil": {
+                "quantity": 1.0,
+                "qtype": "tsp"
+            },
+            "scallions": {
+                "quantity": 5.0,
+                "qtype": ""
+            },
+            "carrots": {
+                "quantity": 2.0,
+                "qtype": ""
+            },
+            "wonton wrappers": {
+                "quantity": 50.0,
+                "qtype": ""
+            }
+        }
+    },
+    "Velvet Chicken": {
+        "ingredients": {
+            "egg": {
+                "quantity": 1.0,
+                "qtype": ""
+            },
+            "cornstarch": {
+                "quantity": 1.0,
+                "qtype": "tsp"
+            },
+            "chicken breasts": {
+                "quantity": 4.0,
+                "qtype": ""
+            },
+            "fish sauce": {
+                "quantity": 1.0,
+                "qtype": "tbsp"
+            },
+            "lime": {
+                "quantity": 1.0,
+                "qtype": ""
+            },
+            "peanut oil": {
+                "quantity": 1.0,
+                "qtype": "tbsp"
+            },
+            "ginger": {
+                "quantity": 1.0,
+                "qtype": "tbsp"
+            },
+            "red bell pepper": {
+                "quantity": 1.0,
+                "qtype": ""
+            },
+            "sweet onion": {
+                "quantity": 0.5,
+                "qtype": ""
+            },
+            "garlic cloves": {
+                "quantity": 1.0,
+                "qtype": ""
+            },
+            "chili": {
+                "quantity": 1,
+                "qtype": "pinch"
+            }
+        }
+    },
+    "Easy Egg Fried Rice": {
+        "ingredients": {
+            "peanut oil": {
+                "quantity": 4.0,
+                "qtype": "tbsp"
+            },
+            "garlic": {
+                "quantity": 2.0,
+                "qtype": "tbsp"
+            },
+            "ginger": {
+                "quantity": 2.0,
+                "qtype": "tbsp"
+            },
+            "sweet onion": {
+                "quantity": 1.0,
+                "qtype": ""
+            },
+            "rice": {
+                "quantity": 4.0,
+                "qtype": "cups"
+            },
+            "eggs": {
+                "quantity": 4.0,
+                "qtype": ""
+            },
+            "sesame oil": {
+                "quantity": 2.0,
+                "qtype": "tsp"
+            },
+            "soy sauce": {
+                "quantity": 4.0,
+                "qtype": "tsp"
+            },
+            "salt": {
+                "quantity": 1,
+                "qtype": "pinch"
+            },
+            "black": {
+                "quantity": 1,
+                "qtype": "pinch"
+            }
+        }
+    },
+    "Easy Chicken Congee with Peanuts": {
+        "ingredients": {
+            "chicken broth": {
+                "quantity": 5.0,
+                "qtype": "cups"
+            },
+            "rice": {
+                "quantity": 1.0,
+                "qtype": "cups"
+            },
+            "chicken": {
+                "quantity": 2.0,
+                "qtype": "cups"
+            },
+            "salt": {
+                "quantity": 1,
+                "qtype": "pinch"
+            },
+            "soy": {
+                "quantity": 1,
+                "qtype": "pinch"
+            },
+            "sesame": {
+                "quantity": 1,
+                "qtype": "pinch"
+            },
+            "scallions": {
+                "quantity": 1,
+                "qtype": "pinch"
+            },
+            "cilantro": {
+                "quantity": 1,
+                "qtype": "pinch"
+            },
+            "peanuts": {
+                "quantity": 1,
+                "qtype": "pinch"
+            },
+            "chili": {
+                "quantity": 1,
+                "qtype": "pinch"
+            }
+        }
+    },
+    "Twice-Cooked Pork": {
+        "ingredients": {
+            "pork belly": {
+                "quantity": 1.0,
+                "qtype": "lb"
+            },
+            "soy sauce": {
+                "quantity": 1.0,
+                "qtype": "tbsp"
+            },
+            "Shaoxing rice wine": {
+                "quantity": 1.0,
+                "qtype": "tbsp"
+            },
+            "chili bean sauce": {
+                "quantity": 1.0,
+                "qtype": "tbsp"
+            },
+            "sesame oil": {
+                "quantity": 1.0,
+                "qtype": "tsp"
+            },
+            "sugar": {
+                "quantity": 2.0,
+                "qtype": "tsp"
+            },
+            "peanut oil": {
+                "quantity": 1.0,
+                "qtype": "tbsp"
+            },
+            "black bean sauce": {
+                "quantity": 1.0,
+                "qtype": "tbsp"
+            },
+            "garlic": {
+                "quantity": 3.0,
+                "qtype": ""
+            },
+            "scallion": {
+                "quantity": 1.0,
+                "qtype": ""
+            }
+        }
+    },
+    "Succulent Shrimp Wontons": {
+        "ingredients": {
+            "shrimp": {
+                "quantity": 0.33,
+                "qtype": "lb"
+            },
+            "sesame oil": {
+                "quantity": 0.25,
+                "qtype": "tsp"
+            },
+            "white": {
+                "quantity": 1,
+                "qtype": "pinch"
+            },
+            "salt": {
+                "quantity": 1,
+                "qtype": "pinch"
+            },
+            "wonton wrappers": {
+                "quantity": 20.0,
+                "qtype": ""
+            },
+            "egg": {
+                "quantity": 1.0,
+                "qtype": ""
+            }
+        }
+    },
+    "Stir-Fried Eggs with Tomato": {
+        "ingredients": {
+            "eggs": {
+                "quantity": 4.0,
+                "qtype": ""
+            },
+            "cilantro": {
+                "quantity": 0.25,
+                "qtype": "cups"
+            },
+            "sesame oil": {
+                "quantity": 1.0,
+                "qtype": "tbsp"
+            },
+            "salt": {
+                "quantity": 0.5,
+                "qtype": "tsp"
+            },
+            "black pepper": {
+                "quantity": 0.125,
+                "qtype": "tsp"
+            },
+            "peanut oil": {
+                "quantity": 2.0,
+                "qtype": "tbsp"
+            },
+            "garlic": {
+                "quantity": 2.0,
+                "qtype": "tsp"
+            },
+            "shallots": {
+                "quantity": 2.0,
+                "qtype": "tbsp"
+            },
+            "medium tomatoes": {
+                "quantity": 2.0,
+                "qtype": ""
+            },
+            "Shaoxing rice wine": {
+                "quantity": 2.0,
+                "qtype": "tsp"
+            },
+            "sugar": {
+                "quantity": 0.25,
+                "qtype": "tsp"
+            }
+        }
+    },
+    "Herbed Frittata with Cherry Tomatoes": {
+        "ingredients": {
+            "eggs": {
+                "quantity": 10.0,
+                "qtype": ""
+            },
+            "whole milk": {
+                "quantity": 1.0,
+                "qtype": "tbsp"
+            },
+            "fresh basil": {
+                "quantity": 1.0,
+                "qtype": "tbsp"
+            },
+            "fresh parsley": {
+                "quantity": 1.0,
+                "qtype": "tbsp"
+            },
+            "butter": {
+                "quantity": 2.0,
+                "qtype": "tbsp"
+            },
+            "Gruyere cheese": {
+                "quantity": 0.25,
+                "qtype": "cups"
+            },
+            "cherry tomatoes": {
+                "quantity": 0.5,
+                "qtype": "cups"
+            },
+            "olive oil": {
+                "quantity": 1.5,
+                "qtype": "tbsp"
+            },
+            "lemon juice": {
+                "quantity": 1.5,
+                "qtype": "tbsp"
+            },
+            "arugula": {
+                "quantity": 3.0,
+                "qtype": "cup"
+            },
+            "fresh mint": {
+                "quantity": 1.0,
+                "qtype": "tsp"
+            },
+            "fresh chives": {
+                "quantity": 1.0,
+                "qtype": "tsp"
+            }
+        }
+    },
+    "Shakshuka with Feta and Farro": {
+        "ingredients": {
+            "olive oil": {
+                "quantity": 2.0,
+                "qtype": "tbsp"
+            },
+            "yellow onion": {
+                "quantity": 0.5,
+                "qtype": ""
+            },
+            "garlic": {
+                "quantity": 1.0,
+                "qtype": "clove"
+            },
+            "red bell pepper": {
+                "quantity": 1.0,
+                "qtype": ""
+            },
+            "ground cumin": {
+                "quantity": 2.0,
+                "qtype": "tsp"
+            },
+            "smoked paprika": {
+                "quantity": 0.75,
+                "qtype": "tsp"
+            },
+            "red pepper flakes": {
+                "quantity": 0.25,
+                "qtype": "tsp"
+            },
+            "diced tomatoes": {
+                "quantity": 28.0,
+                "qtype": "oz"
+            },
+            "feta cheese": {
+                "quantity": 0.25,
+                "qtype": "lb"
+            },
+            "eggs": {
+                "quantity": 6.0,
+                "qtype": ""
+            },
+            "farro": {
+                "quantity": 3.0,
+                "qtype": "cups"
+            },
+            "fresh parsley": {
+                "quantity": 2.0,
+                "qtype": "tbsp"
+            }
+        }
+    },
+    "Asian Noodle Bowl with Poached Egg": {
+        "ingredients": {
+            "udon noodles": {
+                "quantity": 1.5,
+                "qtype": "lb"
+            },
+            "eggs": {
+                "quantity": 4.0,
+                "qtype": ""
+            },
+            "bacon": {
+                "quantity": 4.0,
+                "qtype": "slice"
+            },
+            "soy sauce": {
+                "quantity": 3.0,
+                "qtype": "tbsp"
+            },
+            "mirin": {
+                "quantity": 2.0,
+                "qtype": "tsp"
+            },
+            "sugar": {
+                "quantity": 1.0,
+                "qtype": "tsp"
+            },
+            "green onion": {
+                "quantity": 3.0,
+                "qtype": ""
+            }
+        }
+    },
+    "Poached Eggs": {
+        "ingredients": {
+            "eggs": {
+                "quantity": 8.0,
+                "qtype": ""
+            }
+        }
+    },
+    "Eggs Blackstone": {
+        "ingredients": {
+            "tomato": {
+                "quantity": 4.0,
+                "qtype": ""
+            },
+            "olive oil": {
+                "quantity": 1.0,
+                "qtype": "tbsp"
+            },
+            "fresh thyme": {
+                "quantity": 1.0,
+                "qtype": "tsp"
+            },
+            "bacon": {
+                "quantity": 8.0,
+                "qtype": "slice"
+            },
+            "country bread": {
+                "quantity": 8.0,
+                "qtype": ""
+            },
+            "eggs": {
+                "quantity": 4.0,
+                "qtype": ""
+            },
+            "lemon juice": {
+                "quantity": 2.0,
+                "qtype": "tbsp"
+            },
+            "butter": {
+                "quantity": 1.0,
+                "qtype": "cups"
+            }
+        }
+    }
+}

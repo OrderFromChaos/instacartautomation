@@ -19,18 +19,49 @@
 # ]
 
 import re
-
-findict = dict()
+import json
 
 with open('recipedata.txt', 'r') as f:
     lines = f.readlines()
 
+findict = dict()
+infore = re.compile('(\d+)(\.\d+)?(\w+)? (.+)')
+
 for line in lines:
-    recipename, inglist = line.split('|')
+    separated = line.split('|')
+    recipename = separated[0]
+    inglist = separated[1]
+    # There are comments sometimes in later | paritions; ignore these
+
+    linedict = dict()
+    linedict['ingredients'] = dict()
     for ing in inglist.split(','):
-        infore = re.compile('(\d+)(\.\d+)?(\w+) (.+)')
-        match = re.match(ing)
-        if not match:
-            raise Exception(f"Ingredient parsing failed on \"{ing}\"")
+        m = re.match(infore, ing)
+        if not m:
+            temp = ing.split(' ')
+            if temp[0] == 'pinch':
+                linedict['ingredients'][temp[1].strip()] = {
+                    'quantity': 1,
+                    'qtype': 'pinch'
+                }
+            else:
+                raise Exception(f"Ingredient parsing failed on \"{ing}\"")
         else:
-            
+            cap = list(m.groups())
+            if cap[1] == None:
+                cap[1] = '.0'
+            if cap[2] == None:
+                cap[2] = ''
+            # cap example:
+            # ('8', '0', 'oz', 'cellophane noodles')
+            linedict['ingredients'][cap[3].strip()] = {
+                'quantity': float(f'{cap[0]}{cap[1]}'),
+                'qtype': cap[2]
+            }
+    
+    findict[recipename] = linedict
+
+with open('recipedata.json', 'w') as f:
+    json.dump(findict, f, indent=4)
+
+print(json.dumps(findict, indent=4))

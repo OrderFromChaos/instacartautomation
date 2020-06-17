@@ -1,3 +1,3 @@
 # instacartautomation
 
-![plan](automationsteps.png)
+![plan](images/automationsteps.png)

@@ -4,3 +4,33 @@
 # Egg Drop Soup|6cups chicken broth,1tsp Shaoxing rice wine,0.25tsp ginger,1tsp sugar,0.25tsp white pepper,1tbsp cornstarch,2 eggs,pinch salt,1 scallions
 
 # This should be converted to json for readability/ease of access
+
+# fmt:
+# [
+#   "Dan Dan Noodles": {
+#     "ingredients": [
+#       ["peanut oil", 1, "tbsp"],
+#       ["bacon", 16, "oz"],
+#       ...
+#     ],
+#     (could include subjective rating, etc. here, good for extensibility)
+#   },
+#   ...
+# ]
+
+import re
+
+findict = dict()
+
+with open('recipedata.txt', 'r') as f:
+    lines = f.readlines()
+
+for line in lines:
+    recipename, inglist = line.split('|')
+    for ing in inglist.split(','):
+        infore = re.compile('(\d+)(\.\d+)?(\w+) (.+)')
+        match = re.match(ing)
+        if not match:
+            raise Exception(f"Ingredient parsing failed on \"{ing}\"")
+        else:
+            

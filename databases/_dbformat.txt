@@ -1,0 +1,23 @@
+Recipe data is input through recipedata.txt, 
+    as the format is more convenient for human input.
+An example of the format is as follows:
+    Easy Egg Fried Rice|4tbsp peanut oil,2tbsp garlic,2tbsp ginger,1 sweet onion,4cups rice,4 eggs,2tsp sesame oil,4tsp soy sauce,pinch salt,pinch black pepper 
+    Easy Chicken Congee with Peanuts|5cups chicken broth,1cups rice,2cups chicken,pinch salt,pinch soy sauce,pinch sesame oil,pinch scallions,pinch cilantro,pinch peanuts,pinch chili oil
+In specific:
+    <recipe name>|<quantity><qtype> <ingredient name>,<...>|<comments or source of recipe>
+
+Because the format of recipedata.txt is not particularly friendly to computers,
+    it first undergoes conversion to recipedata.json. The format of that file is:
+{
+    <recipe name>: {
+        "ingredients": {
+            <ingredient name>: {
+                "quantity": <quantity>,
+                "qtype": <qtype>
+            },
+            <...>
+        }
+    },
+    <...>
+}
+

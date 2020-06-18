@@ -14,7 +14,7 @@
                 "qtype": "tbsp"
             },
             "chicken broth": {
-                "quantity": 1,
+                "quantity": 1.0,
                 "qtype": "cups"
             },
             "chili sauce": {
@@ -149,7 +149,7 @@
                 "quantity": 0.66,
                 "qtype": "tsp"
             },
-            "white": {
+            "white pepper": {
                 "quantity": 1,
                 "qtype": "pinch"
             },
@@ -333,9 +333,9 @@
                 "quantity": 2.0,
                 "qtype": ""
             },
-            "tsp sesame oil": {
+            "sesame oil": {
                 "quantity": 0.5,
-                "qtype": ""
+                "qtype": "tsp"
             }
         }
     },
@@ -445,7 +445,7 @@
                 "quantity": 1,
                 "qtype": "pinch"
             },
-            "black": {
+            "black pepper": {
                 "quantity": 1,
                 "qtype": "pinch"
             }
@@ -609,11 +609,11 @@
                 "quantity": 2.0,
                 "qtype": "tbsp"
             },
-            "sea": {
+            "sea salt": {
                 "quantity": 1,
                 "qtype": "pinch"
             },
-            "black": {
+            "black pepper": {
                 "quantity": 1,
                 "qtype": "pinch"
             },
@@ -689,11 +689,11 @@
                 "quantity": 5.0,
                 "qtype": "tsp"
             },
-            "sea": {
+            "sea salt": {
                 "quantity": 1,
                 "qtype": "pinch"
             },
-            "black": {
+            "black pepper": {
                 "quantity": 1,
                 "qtype": "pinch"
             },
@@ -905,7 +905,7 @@
                 "quantity": 1.0,
                 "qtype": ""
             },
-            "chili": {
+            "chili sauce": {
                 "quantity": 1,
                 "qtype": "pinch"
             }
@@ -949,7 +949,7 @@
                 "quantity": 1,
                 "qtype": "pinch"
             },
-            "black": {
+            "black pepper": {
                 "quantity": 1,
                 "qtype": "pinch"
             }
@@ -973,11 +973,11 @@
                 "quantity": 1,
                 "qtype": "pinch"
             },
-            "soy": {
+            "soy sauce": {
                 "quantity": 1,
                 "qtype": "pinch"
             },
-            "sesame": {
+            "sesame oil": {
                 "quantity": 1,
                 "qtype": "pinch"
             },
@@ -993,7 +993,7 @@
                 "quantity": 1,
                 "qtype": "pinch"
             },
-            "chili": {
+            "chili oil": {
                 "quantity": 1,
                 "qtype": "pinch"
             }
@@ -1053,7 +1053,7 @@
                 "quantity": 0.25,
                 "qtype": "tsp"
             },
-            "white": {
+            "white pepper": {
                 "quantity": 1,
                 "qtype": "pinch"
             },

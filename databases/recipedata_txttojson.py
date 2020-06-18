@@ -40,7 +40,7 @@ for line in lines:
         if not m:
             temp = ing.split(' ')
             if temp[0] == 'pinch':
-                linedict['ingredients'][temp[1].strip()] = {
+                linedict['ingredients'][' '.join(temp[1:]).strip()] = {
                     'quantity': 1,
                     'qtype': 'pinch'
                 }

@@ -28,7 +28,7 @@ class Ingredient:
 
         # Pick preferred quantity
         preferred = None
-        if SPECIALFLAG:
+        if self.name in specific_preferred:
             preferred = specific_preferred[self.name]
         elif LIQUIDFLAG:
             preferred = liquid_preferred
@@ -66,6 +66,7 @@ class Ingredient:
                 else:
                     raise Exception('(No preferred type)\n'
                                     + f'Unable to convert\n{other}\ninto\n{self}')
+                return other
         else:
             # Convert both to preferred qtype
             
@@ -94,6 +95,7 @@ class Ingredient:
                 else:
                     raise Exception(f'(Preferred type: {preferred})\n'
                                     + f'Unable to convert\n{other}\ninto\n{preferred}')
+            return other
 
     def __add__(self, other):
         other = self._convert(other)

@@ -6,6 +6,8 @@
 
 # TODO: Support grams (g)
 # TODO: Support gallons/pints
+# TODO: Rewrite to be a graph so no need to convert 
+#         lb->tbsp to lb->tsp for special items (for example)
 
 from collections import defaultdict # emulates C++ multimap
 

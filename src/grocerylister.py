@@ -11,12 +11,27 @@ request = [
 with open('../databases/recipedata.json', 'r') as f:
     db = json.load(f)
 
+request = [[x,1] for x in list(db) if x not in ["Pineapple Fried Rice",
+            "Breakfast Burrito", "Velvet Chicken", "Easy Egg Fried Rice",
+            "General Tso's Chicken", "Easy Sesame Chicken", "Twice-Cooked Pork"]]
+# Traceback (most recent call last):
+#   File "grocerylister.py", line 34, in <module>
+#     ingredients[ing] += ingobj
+#   File "/home/order/Dropbox/Python_Code/Utility/Meal_Planning/src/ingredient.py", line 100, in __add__
+#     self.quantity += other.quantity
+# AttributeError: 'NoneType' object has no attribute 'quantity'
+
+# Exception: sweet onion
+# Exception: chicken
+# Exception: garlic
+
 with open('../databases/ingdata.json', 'r') as f:
     ingdata = json.load(f)
 
 ingredients = dict()
 
 for recipe, quant in request:
+    print(recipe)
     for ing in db[recipe]['ingredients']:
         data = db[recipe]['ingredients'][ing]
         ingobj = Ingredient(
@@ -26,7 +41,10 @@ for recipe, quant in request:
             liquid=ingdata[ing]['liquid']
         )
         if ing in ingredients:
-            ingredients[ing] += ingobj
+            try:
+                ingredients[ing] += ingobj
+            except AttributeError:
+                raise Exception(f'{ing}')
         else:
             ingredients[ing] = ingobj
 

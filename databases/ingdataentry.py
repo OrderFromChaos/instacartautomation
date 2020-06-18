@@ -9,6 +9,9 @@ with open('recipedata.json', 'r') as f:
 
 uniqueing = set()
 
+# TODO: make this based on existing ingdata ingredients w/o required keys
+#       instead of nonexistent ingredients
+
 for recipe in db:
     for ing in db[recipe]['ingredients']:
         uniqueing.add(ing)
@@ -34,6 +37,10 @@ for ing in uniqueorder:
         }
     else:
         break
+
+print('Please paste the instacart URL for each of the items.')
+print('Entering "q" will cause the program to halt.')
+
 
 with open('ingdata.json', 'w') as f:
     json.dump(existing, f, indent=4)

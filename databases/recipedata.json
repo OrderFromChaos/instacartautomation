@@ -753,7 +753,7 @@
                 "quantity": 1.0,
                 "qtype": "tbsp"
             },
-            "garlic clove": {
+            "garlic cloves": {
                 "quantity": 1.0,
                 "qtype": ""
             },
@@ -865,7 +865,7 @@
     },
     "Velvet Chicken": {
         "ingredients": {
-            "egg": {
+            "eggs": {
                 "quantity": 1.0,
                 "qtype": ""
             },
@@ -1037,7 +1037,7 @@
                 "quantity": 3.0,
                 "qtype": ""
             },
-            "scallion": {
+            "scallions": {
                 "quantity": 1.0,
                 "qtype": ""
             }
@@ -1065,7 +1065,7 @@
                 "quantity": 20.0,
                 "qtype": ""
             },
-            "egg": {
+            "eggs": {
                 "quantity": 1.0,
                 "qtype": ""
             }

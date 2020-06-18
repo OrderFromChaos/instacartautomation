@@ -15,7 +15,7 @@
             },
             "chicken broth": {
                 "quantity": 1.0,
-                "qtype": "cups"
+                "qtype": "cup"
             },
             "chili sauce": {
                 "quantity": 3.0,
@@ -135,7 +135,7 @@
             },
             "chicken broth": {
                 "quantity": 2.0,
-                "qtype": "cups"
+                "qtype": "cup"
             },
             "sesame oil": {
                 "quantity": 0.5,
@@ -155,7 +155,7 @@
             },
             "peas": {
                 "quantity": 0.66,
-                "qtype": "cups"
+                "qtype": "cup"
             },
             "cornstarch": {
                 "quantity": 4.0,
@@ -175,7 +175,7 @@
         "ingredients": {
             "chicken broth": {
                 "quantity": 6.0,
-                "qtype": "cups"
+                "qtype": "cup"
             },
             "Shaoxing rice wine": {
                 "quantity": 1.0,
@@ -215,7 +215,7 @@
         "ingredients": {
             "chicken broth": {
                 "quantity": 0.75,
-                "qtype": "cups"
+                "qtype": "cup"
             },
             "hoisin sauce": {
                 "quantity": 1.5,
@@ -239,11 +239,11 @@
             },
             "bean sprouts": {
                 "quantity": 1.5,
-                "qtype": "cups"
+                "qtype": "cup"
             },
             "bacon": {
                 "quantity": 0.25,
-                "qtype": "cups"
+                "qtype": "cup"
             },
             "soy sauce": {
                 "quantity": 1.5,
@@ -287,7 +287,7 @@
         "ingredients": {
             "chicken broth": {
                 "quantity": 4.0,
-                "qtype": "cups"
+                "qtype": "cup"
             },
             "soy sauce": {
                 "quantity": 3.0,
@@ -295,11 +295,11 @@
             },
             "bacon": {
                 "quantity": 0.25,
-                "qtype": "cups"
+                "qtype": "cup"
             },
             "cremini mushrooms": {
                 "quantity": 0.5,
-                "qtype": "cups"
+                "qtype": "cup"
             },
             "garlic chili sauce": {
                 "quantity": 1.0,
@@ -307,7 +307,7 @@
             },
             "white vinegar": {
                 "quantity": 0.25,
-                "qtype": "cups"
+                "qtype": "cup"
             },
             "pepper": {
                 "quantity": 0.25,
@@ -315,7 +315,7 @@
             },
             "canned bamboo shoots": {
                 "quantity": 0.33,
-                "qtype": "cups"
+                "qtype": "cup"
             },
             "tofu": {
                 "quantity": 3.0,
@@ -415,23 +415,23 @@
             },
             "sweet corn": {
                 "quantity": 0.5,
-                "qtype": "cups"
+                "qtype": "cup"
             },
             "peas": {
                 "quantity": 0.5,
-                "qtype": "cups"
+                "qtype": "cup"
             },
             "rice": {
                 "quantity": 3.0,
-                "qtype": "cups"
+                "qtype": "cup"
             },
             "pineapple": {
                 "quantity": 2.0,
-                "qtype": "cups"
+                "qtype": "cup"
             },
             "bacon": {
                 "quantity": 0.5,
-                "qtype": "cups"
+                "qtype": "cup"
             },
             "scallions": {
                 "quantity": 2.0,
@@ -439,7 +439,7 @@
             },
             "cashews": {
                 "quantity": 0.25,
-                "qtype": "cups"
+                "qtype": "cup"
             },
             "salt": {
                 "quantity": 1,
@@ -471,7 +471,7 @@
             },
             "cremini mushrooms": {
                 "quantity": 1.0,
-                "qtype": "cups"
+                "qtype": "cup"
             },
             "red bell pepper": {
                 "quantity": 1.0,
@@ -487,11 +487,11 @@
             },
             "broccoli florets": {
                 "quantity": 1.0,
-                "qtype": "cups"
+                "qtype": "cup"
             },
             "green beans": {
                 "quantity": 0.5,
-                "qtype": "cups"
+                "qtype": "cup"
             }
         }
     },
@@ -503,7 +503,7 @@
             },
             "sugar": {
                 "quantity": 0.25,
-                "qtype": "cups"
+                "qtype": "cup"
             },
             "packet gelatin": {
                 "quantity": 1.0,
@@ -511,7 +511,7 @@
             },
             "evaporated milk": {
                 "quantity": 0.5,
-                "qtype": "cups"
+                "qtype": "cup"
             },
             "raspberries": {
                 "quantity": 1,
@@ -523,7 +523,7 @@
         "ingredients": {
             "soy sauce": {
                 "quantity": 0.5,
-                "qtype": "cups"
+                "qtype": "cup"
             },
             "red wine vinegar": {
                 "quantity": 2.0,
@@ -547,7 +547,7 @@
             },
             "sweet onion": {
                 "quantity": 0.5,
-                "qtype": "cups"
+                "qtype": "cup"
             },
             "ground turkey": {
                 "quantity": 1.0,
@@ -555,7 +555,7 @@
             },
             "broccoli florets": {
                 "quantity": 1.0,
-                "qtype": "cups"
+                "qtype": "cup"
             },
             "carrots": {
                 "quantity": 2.0,
@@ -579,7 +579,7 @@
             },
             "ginger": {
                 "quantity": 0.33,
-                "qtype": "cups"
+                "qtype": "cup"
             },
             "cremini mushrooms": {
                 "quantity": 5.0,
@@ -587,11 +587,11 @@
             },
             "Shaoxing rice wine": {
                 "quantity": 0.5,
-                "qtype": "cups"
+                "qtype": "cup"
             },
             "chicken broth": {
                 "quantity": 6.0,
-                "qtype": "cups"
+                "qtype": "cup"
             },
             "chicken": {
                 "quantity": 1.5,
@@ -655,7 +655,7 @@
             },
             "Shaoxing rice wine": {
                 "quantity": 0.5,
-                "qtype": "cups"
+                "qtype": "cup"
             }
         }
     },
@@ -683,7 +683,7 @@
             },
             "chicken broth": {
                 "quantity": 0.75,
-                "qtype": "cups"
+                "qtype": "cup"
             },
             "cornstarch": {
                 "quantity": 5.0,
@@ -799,7 +799,7 @@
         "ingredients": {
             "orange juice": {
                 "quantity": 1.5,
-                "qtype": "cups"
+                "qtype": "cup"
             },
             "eggs": {
                 "quantity": 2.0,
@@ -807,7 +807,7 @@
             },
             "milk": {
                 "quantity": 0.25,
-                "qtype": "cups"
+                "qtype": "cup"
             },
             "cinnamon": {
                 "quantity": 0.25,
@@ -819,7 +819,7 @@
             },
             "strawberry jam": {
                 "quantity": 0.25,
-                "qtype": "cups"
+                "qtype": "cup"
             },
             "butter": {
                 "quantity": 2.0,
@@ -931,7 +931,7 @@
             },
             "rice": {
                 "quantity": 4.0,
-                "qtype": "cups"
+                "qtype": "cup"
             },
             "eggs": {
                 "quantity": 4.0,
@@ -959,15 +959,15 @@
         "ingredients": {
             "chicken broth": {
                 "quantity": 5.0,
-                "qtype": "cups"
+                "qtype": "cup"
             },
             "rice": {
                 "quantity": 1.0,
-                "qtype": "cups"
+                "qtype": "cup"
             },
             "chicken": {
                 "quantity": 2.0,
-                "qtype": "cups"
+                "qtype": "cup"
             },
             "salt": {
                 "quantity": 1,
@@ -1079,7 +1079,7 @@
             },
             "cilantro": {
                 "quantity": 0.25,
-                "qtype": "cups"
+                "qtype": "cup"
             },
             "sesame oil": {
                 "quantity": 1.0,
@@ -1143,11 +1143,11 @@
             },
             "Gruyere cheese": {
                 "quantity": 0.25,
-                "qtype": "cups"
+                "qtype": "cup"
             },
             "cherry tomatoes": {
                 "quantity": 0.5,
-                "qtype": "cups"
+                "qtype": "cup"
             },
             "olive oil": {
                 "quantity": 1.5,
@@ -1215,7 +1215,7 @@
             },
             "farro": {
                 "quantity": 3.0,
-                "qtype": "cups"
+                "qtype": "cup"
             },
             "fresh parsley": {
                 "quantity": 2.0,
@@ -1295,7 +1295,7 @@
             },
             "butter": {
                 "quantity": 1.0,
-                "qtype": "cups"
+                "qtype": "cup"
             }
         }
     }

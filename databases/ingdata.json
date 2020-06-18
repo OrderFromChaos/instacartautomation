@@ -51,7 +51,7 @@
         "liquid": true
     },
     "butter": {
-        "liquid": false
+        "liquid": true
     },
     "fresh mint": {
         "liquid": false

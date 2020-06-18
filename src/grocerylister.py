@@ -1,121 +1,34 @@
-from conversionrules import *
-    # These are the relevant variables:
-    # "X" is either special, liquid, or general
-    # X_rules
-    # X_preferred
-    # Note that there is no "general_preferred",
-    #   it is assumed that recipes will mention the item in its buyable qtype
-from copy import deepcopy
+from ingredient import Ingredient
+import json
 
-class Ingredient:
-    def __init__(self, name='', quantity=0, qtype='', liquid=False):
-        # qtype examples: "cup", "fl oz", "tbsp"
-        self.name = name
-        self.quantity = quantity
-        self.qtype = qtype
-        self.liquid = liquid
-    def _convert(self, other):
-        # Converts both sides, updates self, returns other
-        assert type(other) == Ingredient, ('Can only do operations between '
-             + 'two Ingredient objects. ' 
-             + f'Right obj ({other}) is not of Ingredient class.')
-        assert self.name == other.name, ('Cannot do operations between '
-              + 'two different Ingredient objects: '
-              + f'({self.name}) AND ({other.name})')
+request = [
+    ['Egg Drop Soup', 2],
+    ['Orange French Toast', 2],
+    ['Asian Noodle Bowl with Poached Egg', 2],
+    ['Eggs Blackstone', 1]
+]
 
-        SPECIALFLAG = self.name in special_ingredients
-        LIQUIDFLAG = self.liquid
+with open('../databases/recipedata.json', 'r') as f:
+    db = json.load(f)
 
-        # Pick preferred quantity
-        preferred = None
-        if SPECIALFLAG:
-            preferred = specific_preferred[self.name]
-        elif LIQUIDFLAG:
-            preferred = liquid_preferred
+with open('../databases/ingdata.json', 'r') as f:
+    ingdata = json.load(f)
 
-        all_conversions = deepcopy(general_rules)
-        # print(all_conversions)
-        # Merge specifically applicable defaultdicts
-        if SPECIALFLAG:
-            for key, convlist in special_rules[self.name].items():
-                for conv in convlist:
-                    # print(convlist)
-                    all_conversions[key].append(conv)
-        if LIQUIDFLAG:
-            for key, convlist in liquid_rules.items():
-                for conv in convlist:
-                    all_conversions[key].append(conv)
-        
-        if preferred == None:
-            if self.qtype == other.qtype:
-                # Nothing left to do
-                return other
-            else:
-                # Unit convert other's qtype into self
-                totype = self.qtype
-                fromtype = other.qtype
-                for conv in all_conversions[fromtype]:
-                    if conv[0] == totype:
-                        return Ingredient(
-                            name=other.name,
-                            quantity=other.quantity*conv[1],
-                            qtype=self.qtype,
-                            liquid=other.liquid
-                        )
-                        break
-                else:
-                    raise Exception('(No preferred type)\n'
-                                    + f'Unable to convert\n{other}\ninto\n{self}')
+ingredients = dict()
+
+for recipe, quant in request:
+    for ing in db[recipe]['ingredients']:
+        data = db[recipe]['ingredients'][ing]
+        ingobj = Ingredient(
+            name=ing,
+            quantity=data['quantity']*quant,
+            qtype=data['qtype'],
+            liquid=ingdata[ing]['liquid']
+        )
+        if ing in ingredients:
+            ingredients[ing] += ingobj
         else:
-            # Convert both to preferred qtype
-            
-            # Self
-            if self.qtype != preferred:
-                for conv in all_conversions[self.qtype]:
-                    if conv[0] == preferred:
-                        self.quantity = self.quantity*conv[1]
-                        self.qtype = preferred
-                        break
-                else:
-                    raise Exception(f'(Preferred type: {preferred})\n'
-                                    + f'Unable to convert\n{self}\ninto\n{preferred}')
+            ingredients[ing] = ingobj
 
-            # Other
-            if other.qtype != preferred:
-                for conv in all_conversions[other.qtype]:
-                    if conv[0] == preferred:
-                        return Ingredient(
-                            name=other.name,
-                            quantity=other.quantity*conv[1],
-                            qtype=self.qtype,
-                            liquid=other.liquid
-                        )
-                        break
-                else:
-                    raise Exception(f'(Preferred type: {preferred})\n'
-                                    + f'Unable to convert\n{other}\ninto\n{preferred}')
-
-    def __add__(self, other):
-        other = self._convert(other)
-        self.quantity += other.quantity
-        return self
-    
-    def __repr__(self):
-        return str((self.name,self.quantity,self.qtype)) # Done the lazy way
-
-# Basic testing
-
-a = Ingredient(
-    name='soy sauce', 
-    quantity=3,
-    qtype='tbsp',
-    liquid=True
-)
-b = Ingredient(
-    name='soy sauce', 
-    quantity=1,
-    qtype='tsp',
-    liquid=True
-)
-a + b
-print(a)
+for ing, obj in ingredients.items():
+    print('{:<20} {} {}'.format(obj.name, round(obj.quantity, 2), obj.qtype))

@@ -4,7 +4,8 @@
 # conversions need to work both ways (tsp -> tbsp, tbsp -> tsp)
 # some quantities are preferred for human convenience/purchasing
 
-# TODO: Allow for grams (g)
+# TODO: Support grams (g)
+# TODO: Support gallons/pints
 
 from collections import defaultdict # emulates C++ multimap
 
@@ -50,21 +51,34 @@ general_rules['tbsp'].append(('tsp', 3))
 general_rules['lb'].append(('oz', 16))
 general_rules['cup'].append(('tbsp', 16))
 
-print(liquid_rules)
+if __name__ == "__main__":
+    print(general_rules)
+    print(liquid_rules)
 
 # Reverse all dictionaries so they work in the opposite order
 for entry, to in list(liquid_rules.items()):
     for conv in to:
-        liquid_rules[conv[0]] = (entry, 1/conv[1])
+        liquid_rules[conv[0]].append((entry, 1/conv[1]))
 for entry, to in list(general_rules.items()):
     for conv in to:
-        general_rules[conv[0]] = (entry, 1/conv[1])
+        general_rules[conv[0]].append((entry, 1/conv[1]))
 
 for ing in list(special_rules):
     for entry, to in list(special_rules[ing].items()):
-        print(entry, to)
         for conv in to:
-            special_rules[ing][conv[0]] = (entry, 1/conv[1])
+            special_rules[ing][conv[0]].append((entry, 1/conv[1]))
 
-print(liquid_rules)
-print(special_rules)
+if __name__ == "__main__":
+    print(liquid_rules)
+    print(special_rules)
+
+specific_preferred = {
+    'ginger': 'lb',
+    'peanut butter': 'lb',
+    'garlic': '',
+    'sugar': 'lb',
+    'sweet onion': '',
+    'yellow onion': ''
+}
+
+liquid_preferred = 'oz'

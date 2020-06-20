@@ -13,6 +13,44 @@ from collections import defaultdict # emulates C++ multimap
 
 # Source: https://www.foodnetwork.ca/kitchen-basics/blog/your-ultimate-guide-to-cooking-and-baking-conversions/
 
+# Preferred for categories
+liquid_preferred = 'oz'
+specific_preferred = {
+    'ginger': 'lb',
+    'peanut butter': 'oz',
+    'garlic': '',
+    'sugar': 'lb',
+    'sweet onion': '',
+    'yellow onion': '',
+    'bacon': 'oz',
+    'cremini mushrooms': 'lb',
+    'chicken': 'lb',
+    'white pepper': 'oz',
+    'cornstarch': 'oz',
+    'scallions': '',
+    'minced garlic': 'oz',
+    'garlic cloves': '',
+    'peas': 'oz',
+    'bean sprouts': 'oz',
+    'egg roll wrappers': '',
+    'sweet corn': 'oz',
+    'rice': 'lb',
+    'pineapple': 'lb',
+    'cashews': 'oz',
+    'broccoli florets': 'oz',
+    'green beans': 'oz',
+    'cinnamon': 'oz',
+    'sesame seeds': 'oz',
+    'shredded cheese': 'oz',
+    'raspberries': 'oz container', # workaround
+    'milk': 'gal',
+    'white bread': 'oz',
+    'wonton wrappers': 'oz',
+    'chicken breasts': 'lb',
+    'shallots': 'item',
+    'medium tomatoes': 'lb'
+}
+
 special_ingredients = {
     'ginger',
     'peanut butter',
@@ -25,7 +63,28 @@ special_ingredients = {
     'chicken',
     'white pepper',
     'cornstarch',
-    'scallions'
+    'scallions',
+    'minced garlic',
+    'garlic cloves',
+    'peas',
+    'bean sprouts',
+    'egg roll wrappers',
+    'sweet corn',
+    'rice',
+    'pineapple',
+    'cashews',
+    'broccoli florets',
+    'green beans',
+    'cinnamon',
+    'sesame seeds',
+    'shredded cheese',
+    'raspberries',
+    'milk',
+    'white bread',
+    'wonton wrappers',
+    'chicken breasts',
+    'shallots',
+    'medium tomatoes'
 }
 # dict of string: defaultdict
 special_rules = {i: defaultdict(list) for i in special_ingredients}
@@ -57,6 +116,7 @@ special_rules['bacon']['slice'].append(('oz', 1))
 # Source: https://www.thespruceeats.com/mushroom-equivalents-measures-and-substitutions-1807471
 special_rules['cremini mushrooms']['cup'].append(('', 4))
 special_rules['cremini mushrooms']['oz'].append(('', 24/16))
+special_rules['cremini mushrooms']['lb'].append(('', 24))
 
 # Source: https://www.atcoblueflamekitchen.com/en-ca/how-to/cups-medium-large-onion.html
 special_rules['sweet onion'][''].append(('cup', 2))
@@ -64,9 +124,41 @@ special_rules['sweet onion'][''].append(('cup', 2))
 # Source: https://www.aqua-calc.com/calculate/food-weight-to-volume
 special_rules['white pepper']['oz'].append(('tsp', 42.25/3.53))
 special_rules['cornstarch']['oz'].append(('tbsp', 0.12))
+special_rules['cornstarch']['oz'].append(('tsp', 0.12*3))
+special_rules['minced garlic']['oz'].append(('tbsp', 16/8.47))
+special_rules['peas']['cup'].append(('oz', 6.35))
+special_rules['bean sprouts']['cup'].append(('oz', 8.11))
+special_rules['bean sprouts']['cup'].append(('oz bag', 8.11))
+special_rules['bean sprouts']['oz bag'].append(('oz', 1))
+special_rules['sweet corn']['cup'].append(('oz', 4.76))
+special_rules['rice']['cup'].append(('lb', 0.49))
+special_rules['pineapple']['item'].append(('lb', 4.16))
+special_rules['pineapple']['cup'].append(('lb', 0.55))
+special_rules['pineapple']['item'].append(('cup', 4.16*2))
+special_rules['cashews']['cup'].append(('oz', 5.27))
+special_rules['broccoli florets']['cup'].append(('oz', 2.57))
+special_rules['green beans']['cup'].append(('oz', 2.93))
+special_rules['cinnamon']['tsp'].append(('oz', 5.42/48))
+special_rules['sesame seeds']['tsp'].append(('oz', 9.03/48))
+special_rules['shredded cheese']['tbsp'].append(('oz', 3.95/16))
+special_rules['milk']['gal'].append(('oz', 45.5))
+
+# Source: https://grocery.walmart.com/ip/Wonder-Classic-White-Bread-20-oz-Loaf/37858875
+special_rules['white bread']['oz'].append(('slices', 1))
+
+# Source: https://www.seriouseats.com/2012/10/ask-the-food-lab-on-sizing-shallots-and-frying-curry.html#:~:text=1%20Large%20Shallot%20%3D%201%2F2,2%20tablespoons%20minced%20or%20sliced
+special_rules['shallots']['item'].append(('tbsp', 4)) # assuming medium shallot
+
+# Source: https://www.thespruceeats.com/tomato-equivalents-1807482
+special_rules['medium tomatoes']['lb'].append(('', 3))
 
 # Source: ????
 special_rules['chicken']['cup'].append(('lb', 5.25/16))
+special_rules['garlic cloves']['count bag'].append(('', 3*10))
+special_rules['egg roll wrappers']['oz'].append(('', 50/18))
+special_rules['raspberries']['pinch'].append(('oz container', 2)) # workaround for raspberries
+special_rules['wonton wrappers']['oz'].append(('', 40/14))
+special_rules['chicken breasts']['lb'].append(('', 2))
 
 # defaultdict
 liquid_rules = defaultdict(list)
@@ -74,6 +166,7 @@ liquid_rules['oz'].append(('tbsp', 2))
 liquid_rules['oz'].append(('tsp', 6))
 liquid_rules['oz'].append(('cup', 1/8))
 liquid_rules['fl oz'].append(('oz', 1))
+liquid_rules['oz']
 
 # defaultdict
 # keep same unit type, like volume -> volume
@@ -83,6 +176,9 @@ general_rules['tbsp'].append(('tsp', 3))
 general_rules['lb'].append(('oz', 16))
 general_rules['cup'].append(('tbsp', 16))
 general_rules['ct'].append(('', 1))
+general_rules['item'].append(('', 1))
+general_rules['count bag'].append(('', 1))
+general_rules['each'].append(('', 1))
 
 general_rules['pinch'].append(('tsp', 0))
 general_rules['pinch'].append(('tbsp', 0))
@@ -112,9 +208,10 @@ if __name__ == "__main__":
     print(liquid_rules)
     print(general_rules)
 
+
 specific_preferred = {
     'ginger': 'lb',
-    'peanut butter': 'lb',
+    'peanut butter': 'oz',
     'garlic': '',
     'sugar': 'lb',
     'sweet onion': '',
@@ -124,8 +221,7 @@ specific_preferred = {
     'chicken': 'lb',
     'white pepper': 'oz',
     'cornstarch': 'oz',
-    'scallions': ''
+    'scallions': '',
+    'minced garlic': 'oz'
 }
 # TODO: Rewrite Ingredient class to still call this without SPECIALFLAG
-
-liquid_preferred = 'oz'

@@ -6,7 +6,7 @@ from selenium.common.exceptions import NoSuchElementException
 from datetime import datetime, timedelta
 from ingredient import Ingredient
 
-PRICECOOLDOWN = 12*60 # 12 hrs (minutes)
+PRICECOOLDOWN = 24*7 # 1 week worth of hours 
 # Some ingredients are usually used in pinch quantities and don't
 #     really make sense to compute. Or they might be on a non-instacart
 #     site, which this code doesn't support. Here they are:
@@ -16,7 +16,17 @@ IGNORE = {
     'pepper', # pinch
     'black pepper', #pinch
     'sea salt', # pinch
-    'Shaoxing rice wine' # non-Instacart
+    'Shaoxing rice wine', # non-Instacart
+    'cellophane noodles', # non-Instacart
+    'sesame oil', # non-Instacart (!)
+    'black vinegar', # non-Instacart
+    'garlic chili sauce', # non-Instacart
+    'canned bamboo shoots', # non-Instacart
+    'packet gelatin', # non-Instacart (!)
+    'chili oil', # non-Instacart
+    'chili bean sauce', # non-Instacart
+    'black bean sauce', # non-Instacart
+    'cilantro' # pinch
 }
 
 def updatePrices(inglist, store):
@@ -97,7 +107,14 @@ def updatePrices(inglist, store):
         except NoSuchElementException:
             # The quantity info is in the price div
             pass
-        price = find_xpath('//*[@id="react-views-container"]/div/div/div/div[1]/div/div/div/div/div[1]/div/div[4]/div[1]/div[2]/div/div[1]/span[2]').text
+        try:
+            price = find_xpath('//*[@id="react-views-container"]/div/div/div/div[1]/div/div/div/div/div[1]/div/div[4]/div[1]/div[2]/div/div[1]/span[2]').text
+        except NoSuchElementException:
+            # Item is out of stock
+            print('Out of stock!')
+            time.sleep(5)
+            continue
+
         print(price)
         
         # Types:
@@ -116,14 +133,14 @@ def updatePrices(inglist, store):
         # Differentiate between types
         if quantdivfound:
             quantinfo = quantinfo.split(' ')
-            quant = int(quantinfo[0])
+            quant = float(quantinfo[0])
             qtype = ' '.join(quantinfo[1:]).strip()
         else:
             quant = 1
             qtype = price.split('/')[1].strip()
         if '/' in price:
             price = price.split('/')[0].strip()
-        price = float(price[1:]) # TODO: Make prices not stored as float internally
+        price = float(price[price.index('$')+1:]) # TODO: Make prices not stored as float internally
 
         ingdata[ing]['price'] = dict()
         ingdata[ing]['price'][store] = {
@@ -154,6 +171,7 @@ def computePrice(inglist, store):
 
     for ing in inglist:
         if ing in IGNORE:
+            itemized[ing] = 0.00
             continue
         
         buyinfo = ingdata[ing]['price'][store]
@@ -167,7 +185,11 @@ def computePrice(inglist, store):
 
         buyobj = inglist[ing]._convert(buyobj)
         # now inglist[ing] and buyobj have the same qtype, so we can simply divide
-        cost = inglist[ing].quantity / buyobj.quantity * price
+        try:
+            cost = inglist[ing].quantity / buyobj.quantity * price
+        except ZeroDivisionError:
+            # raise Exception(f'ZeroDivisionError on {buyobj}.')
+            pass
         total += cost
         itemized[ing] = cost
         
@@ -182,9 +204,15 @@ def computePrice(inglist, store):
 if __name__ == "__main__":
 
     # Generate a list to work with
-    request = [
-        ['Egg Drop Soup', 2]
-    ]
+    with open('../databases/recipedata.json', 'r') as f:
+        recipes = json.load(f)
+    
+    request = [[x, 1] for x in recipes]
+
+    # request = [
+    #     ['Dan Dan Noodles', 1]
+    # ]
+
     ingredients = generateGroceryList(request)
     computePrice(ingredients, "stater bros")
 

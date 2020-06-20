@@ -1,18 +1,73 @@
 {
     "fresh basil": {
-        "liquid": false
+        "liquid": false,
+        "URLs": {
+            "stater bros": "https://www.instacart.com/store/items/item_497524991"
+        },
+        "price": {
+            "stater bros": {
+                "quantity": 1,
+                "qtype": "each",
+                "price": 2.99,
+                "updated": "2020-06-19 22:06:33"
+            }
+        }
     },
     "orange juice": {
-        "liquid": true
+        "liquid": true,
+        "URLs": {
+            "stater bros": "https://www.instacart.com/store/items/item_497487304"
+        },
+        "price": {
+            "stater bros": {
+                "quantity": 59.0,
+                "qtype": "oz",
+                "price": 3.19,
+                "updated": "2020-06-19 21:51:39"
+            }
+        }
     },
     "ground cumin": {
-        "liquid": false
+        "liquid": false,
+        "URLs": {
+            "stater bros": "https://www.instacart.com/store/items/item_497498159"
+        },
+        "price": {
+            "stater bros": {
+                "quantity": 1.6,
+                "qtype": "oz",
+                "price": 4.19,
+                "updated": "2020-06-19 22:14:47"
+            }
+        }
     },
     "lime": {
-        "liquid": false
+        "liquid": false,
+        "URLs": {
+            "stater bros": "https://www.instacart.com/store/items/item_497482241"
+        },
+        "price": {
+            "stater bros": {
+                "quantity": 1,
+                "qtype": "each",
+                "price": 0.5,
+                "updated": "2020-06-19 21:55:15"
+            }
+        }
     },
     "sweet onion": {
-        "liquid": false
+        "liquid": false,
+        "URLs": {
+            "stater bros": "https://www.instacart.com/store/items/item_661569117"
+        },
+        "price": {
+            "stater bros": {
+                "quantity": 1,
+                "qtype": "each",
+                "price": 0.99,
+                "updated": "2020-06-19 21:27:31"
+            }
+        }
     },
     "cornstarch": {
         "liquid": false,
@@ -29,25 +84,91 @@
         }
     },
     "red bell pepper": {
-        "liquid": false
+        "liquid": false,
+        "URLs": {
+            "stater bros": "https://www.instacart.com/store/items/item_497484534"
+        },
+        "price": {
+            "stater bros": {
+                "quantity": 1,
+                "qtype": "each",
+                "price": 1.5,
+                "updated": "2020-06-19 21:32:30"
+            }
+        }
     },
     "cellophane noodles": {
         "liquid": false
     },
     "evaporated milk": {
-        "liquid": true
+        "liquid": true,
+        "URLs": {
+            "stater bros": "https://www.instacart.com/store/items/item_497508355"
+        },
+        "price": {
+            "stater bros": {
+                "quantity": 12,
+                "qtype": "fl oz",
+                "price": 0.99,
+                "updated": "2020-06-19 21:37:52"
+            }
+        }
     },
     "celery stalk": {
-        "liquid": false
+        "liquid": false,
+        "URLs": {
+            "stater bros": "https://www.instacart.com/store/items/item_497486925"
+        },
+        "price": {
+            "stater bros": {
+                "quantity": 1,
+                "qtype": "each",
+                "price": 1.99,
+                "updated": "2020-06-19 21:28:08"
+            }
+        }
     },
     "cabbage": {
-        "liquid": false
+        "liquid": false,
+        "URLs": {
+            "stater bros": "https://www.instacart.com/store/items/item_497491595"
+        },
+        "price": {
+            "stater bros": {
+                "quantity": 1,
+                "qtype": "item",
+                "price": 1.82,
+                "updated": "2020-06-19 21:21:41"
+            }
+        }
     },
     "diced tomatoes": {
-        "liquid": false
+        "liquid": false,
+        "URLs": {
+            "stater bros": "https://www.instacart.com/store/items/item_497490617"
+        },
+        "price": {
+            "stater bros": {
+                "quantity": 1,
+                "qtype": "lb",
+                "price": 3.19,
+                "updated": "2020-06-19 22:16:39"
+            }
+        }
     },
     "peanut oil": {
-        "liquid": true
+        "liquid": true,
+        "URLs": {
+            "stater bros": "https://www.instacart.com/store/items/item_497503265"
+        },
+        "price": {
+            "stater bros": {
+                "quantity": 24,
+                "qtype": "fl oz",
+                "price": 4.19,
+                "updated": "2020-06-19 20:55:04"
+            }
+        }
     },
     "chicken broth": {
         "liquid": true,
@@ -67,40 +188,150 @@
         "liquid": false
     },
     "farro": {
-        "liquid": false
+        "liquid": false,
+        "URLs": {
+            "stater bros": "https://www.instacart.com/store/items/item_497495155"
+        },
+        "price": {
+            "stater bros": {
+                "quantity": 8.8,
+                "qtype": "oz",
+                "price": 3.19,
+                "updated": "2020-06-19 22:17:40"
+            }
+        }
     },
     "olive oil": {
-        "liquid": true
+        "liquid": true,
+        "URLs": {
+            "stater bros": "https://www.instacart.com/store/items/item_527322503"
+        },
+        "price": {
+            "stater bros": {
+                "quantity": 16.9,
+                "qtype": "fl oz",
+                "price": 6.29,
+                "updated": "2020-06-19 22:08:57"
+            }
+        }
     },
     "butter": {
-        "liquid": true
+        "liquid": true,
+        "URLs": {
+            "stater bros": "https://www.instacart.com/store/items/item_497494109"
+        },
+        "price": {
+            "stater bros": {
+                "quantity": 1.0,
+                "qtype": "lb",
+                "price": 5.19,
+                "updated": "2020-06-19 21:47:20"
+            }
+        }
     },
     "fresh mint": {
-        "liquid": false
+        "liquid": false,
+        "URLs": {
+            "stater bros": "https://www.instacart.com/store/items/item_497511819"
+        },
+        "price": {
+            "stater bros": {
+                "quantity": 0.25,
+                "qtype": "oz",
+                "price": 0.99,
+                "updated": "2020-06-19 22:11:32"
+            }
+        }
     },
     "chicken breasts": {
-        "liquid": false
+        "liquid": false,
+        "URLs": {
+            "stater bros": "https://www.instacart.com/store/items/item_497513372"
+        },
+        "price": {
+            "stater bros": {
+                "quantity": 1,
+                "qtype": "lb",
+                "price": 3.19,
+                "updated": "2020-06-19 21:54:26"
+            }
+        }
     },
     "chicken": {
-        "liquid": false
+        "liquid": false,
+        "URLs": {
+            "stater bros": "https://www.instacart.com/store/items/item_497513372"
+        },
+        "price": {
+            "stater bros": {
+                "quantity": 1,
+                "qtype": "lb",
+                "price": 3.19,
+                "updated": "2020-06-19 21:42:16"
+            }
+        }
     },
     "sichuan peppercorns": {
         "liquid": false
     },
     "arugula": {
-        "liquid": false
+        "liquid": false,
+        "URLs": {
+            "stater bros": "https://www.instacart.com/store/items/item_497493161"
+        },
+        "price": {
+            "stater bros": {
+                "quantity": 5.0,
+                "qtype": "oz container",
+                "price": 3.19,
+                "updated": "2020-06-19 22:10:21"
+            }
+        }
     },
     "ground turkey": {
-        "liquid": false
+        "liquid": false,
+        "URLs": {
+            "stater bros": "https://www.instacart.com/store/items/item_497493779"
+        },
+        "price": {
+            "stater bros": {
+                "quantity": 16,
+                "qtype": "oz",
+                "price": 4.19,
+                "updated": "2020-06-19 21:41:21"
+            }
+        }
     },
     "black bean sauce": {
         "liquid": true
     },
     "shredded cheese": {
-        "liquid": false
+        "liquid": false,
+        "URLs": {
+            "stater bros": "https://www.instacart.com/store/items/item_497501031"
+        },
+        "price": {
+            "stater bros": {
+                "quantity": 32.0,
+                "qtype": "oz",
+                "price": 7.29,
+                "updated": "2020-06-19 21:50:58"
+            }
+        }
     },
     "rice stick noodles": {
-        "liquid": false
+        "liquid": false,
+        "URLs": {
+            "stater bros": "https://www.instacart.com/store/items/item_497483043"
+        },
+        "price": {
+            "stater bros": {
+                "quantity": 6.75,
+                "qtype": "oz",
+                "price": 2.69,
+                "updated": "2020-06-19 21:43:40"
+            }
+        }
     },
     "salt": {
         "liquid": false
@@ -120,46 +351,178 @@
         }
     },
     "peas": {
-        "liquid": false
+        "liquid": false,
+        "URLs": {
+            "stater bros": "https://www.instacart.com/store/items/item_497517567"
+        },
+        "price": {
+            "stater bros": {
+                "quantity": 16,
+                "qtype": "oz",
+                "price": 1.66,
+                "updated": "2020-06-19 21:12:45"
+            }
+        }
     },
     "egg noodles": {
-        "liquid": false
+        "liquid": false,
+        "URLs": {
+            "stater bros": "https://www.instacart.com/store/items/item_497509545"
+        },
+        "price": {
+            "stater bros": {
+                "quantity": 12,
+                "qtype": "oz",
+                "price": 1.29,
+                "updated": "2020-06-19 20:58:37"
+            }
+        }
     },
     "red pepper flakes": {
-        "liquid": false
+        "liquid": false,
+        "URLs": {
+            "stater bros": "https://www.instacart.com/store/items/item_497506337"
+        },
+        "price": {
+            "stater bros": {
+                "quantity": 1.5,
+                "qtype": "oz",
+                "price": 2.59,
+                "updated": "2020-06-19 22:15:57"
+            }
+        }
     },
     "fresh chives": {
-        "liquid": false
+        "liquid": false,
+        "URLs": {
+            "stater bros": "https://www.instacart.com/store/items/item_497485704"
+        },
+        "price": {
+            "stater bros": {
+                "quantity": 1,
+                "qtype": "each",
+                "price": 2.99,
+                "updated": "2020-06-19 22:12:09"
+            }
+        }
     },
     "garlic cloves": {
-        "liquid": false
+        "liquid": false,
+        "URLs": {
+            "stater bros": "https://www.instacart.com/store/items/item_497519075"
+        },
+        "price": {
+            "stater bros": {
+                "quantity": 3,
+                "qtype": "count bag",
+                "price": 1.29,
+                "updated": "2020-06-19 21:10:23"
+            }
+        }
     },
     "sea salt": {
         "liquid": false
     },
     "rice": {
-        "liquid": false
+        "liquid": false,
+        "URLs": {
+            "stater bros": "https://www.instacart.com/store/items/item_497507198"
+        },
+        "price": {
+            "stater bros": {
+                "quantity": 20,
+                "qtype": "lb",
+                "price": 17.69,
+                "updated": "2020-06-19 21:30:37"
+            }
+        }
     },
     "cremini mushrooms": {
-        "liquid": false
+        "liquid": false,
+        "URLs": {
+            "stater bros": "https://www.instacart.com/store/items/item_543368291"
+        },
+        "price": {
+            "stater bros": {
+                "quantity": 1,
+                "qtype": "lb",
+                "price": 4.19,
+                "updated": "2020-06-19 21:14:07"
+            }
+        }
     },
     "tomato": {
-        "liquid": false
+        "liquid": false,
+        "URLs": {
+            "stater bros": "https://www.instacart.com/store/items/item_497490617"
+        },
+        "price": {
+            "stater bros": {
+                "quantity": 1,
+                "qtype": "lb",
+                "price": 3.19,
+                "updated": "2020-06-19 22:19:17"
+            }
+        }
     },
     "scallion": {
         "liquid": false
     },
     "broccoli florets": {
-        "liquid": false
+        "liquid": false,
+        "URLs": {
+            "stater bros": "https://www.instacart.com/store/items/item_497501189"
+        },
+        "price": {
+            "stater bros": {
+                "quantity": 14,
+                "qtype": "oz",
+                "price": 1.66,
+                "updated": "2020-06-19 21:34:46"
+            }
+        }
     },
     "pork shoulder": {
-        "liquid": false
+        "liquid": false,
+        "URLs": {
+            "stater bros": "https://www.instacart.com/store/items/item_497514191"
+        },
+        "price": {
+            "stater bros": {
+                "quantity": 1,
+                "qtype": "lb",
+                "price": 3.19,
+                "updated": "2020-06-19 21:44:28"
+            }
+        }
     },
     "red wine vinegar": {
-        "liquid": true
+        "liquid": true,
+        "URLs": {
+            "stater bros": "https://www.instacart.com/store/items/item_497502710"
+        },
+        "price": {
+            "stater bros": {
+                "quantity": 12,
+                "qtype": "oz",
+                "price": 3.19,
+                "updated": "2020-06-19 21:39:08"
+            }
+        }
     },
     "pineapple": {
-        "liquid": false
+        "liquid": false,
+        "URLs": {
+            "stater bros": "https://www.instacart.com/store/items/item_497489519"
+        },
+        "price": {
+            "stater bros": {
+                "quantity": 1,
+                "qtype": "item",
+                "price": 4.16,
+                "updated": "2020-06-19 21:31:14"
+            }
+        }
     },
     "scallions": {
         "liquid": false,
@@ -176,25 +539,80 @@
         }
     },
     "bean sprouts": {
-        "liquid": false
+        "liquid": false,
+        "URLs": {
+            "stater bros": "https://www.instacart.com/store/items/item_497489780"
+        },
+        "price": {
+            "stater bros": {
+                "quantity": 12,
+                "qtype": "oz bag",
+                "price": 1.49,
+                "updated": "2020-06-19 21:14:33"
+            }
+        }
     },
     "chili bean sauce": {
         "liquid": true
     },
     "cherry tomatoes": {
-        "liquid": false
+        "liquid": false,
+        "URLs": {
+            "stater bros": "https://www.instacart.com/store/items/item_1681025765"
+        },
+        "price": {
+            "stater bros": {
+                "quantity": 2.0,
+                "qtype": "lb",
+                "price": 6.09,
+                "updated": "2020-06-19 22:08:29"
+            }
+        }
     },
     "canned bamboo shoots": {
         "liquid": false
     },
     "pork belly": {
-        "liquid": false
+        "liquid": false,
+        "URLs": {
+            "stater bros": "https://www.instacart.com/store/items/item_497504232"
+        },
+        "price": {
+            "stater bros": {
+                "quantity": 1,
+                "qtype": "lb",
+                "price": 4.19,
+                "updated": "2020-06-19 22:02:58"
+            }
+        }
     },
     "milk": {
-        "liquid": true
+        "liquid": true,
+        "URLs": {
+            "stater bros": "https://www.instacart.com/store/items/item_497515046"
+        },
+        "price": {
+            "stater bros": {
+                "quantity": 1.0,
+                "qtype": "gal",
+                "price": 2.59,
+                "updated": "2020-06-19 21:52:08"
+            }
+        }
     },
     "whole milk": {
-        "liquid": true
+        "liquid": true,
+        "URLs": {
+            "stater bros": "https://www.instacart.com/store/items/item_497495733"
+        },
+        "price": {
+            "stater bros": {
+                "quantity": 1.0,
+                "qtype": "gal",
+                "price": 2.69,
+                "updated": "2020-06-19 22:06:04"
+            }
+        }
     },
     "black pepper": {
         "liquid": false
@@ -203,16 +621,60 @@
         "liquid": true
     },
     "smoked paprika": {
-        "liquid": false
+        "liquid": false,
+        "URLs": {
+            "stater bros": "https://www.instacart.com/store/items/item_497497387"
+        },
+        "price": {
+            "stater bros": {
+                "quantity": 2.0,
+                "qtype": "oz",
+                "price": 1.49,
+                "updated": "2020-06-19 22:15:33"
+            }
+        }
     },
     "udon noodles": {
-        "liquid": false
+        "liquid": false,
+        "URLs": {
+            "stater bros": "https://www.instacart.com/store/items/item_497507516"
+        },
+        "price": {
+            "stater bros": {
+                "quantity": 12.0,
+                "qtype": "oz",
+                "price": 1.99,
+                "updated": "2020-06-19 22:18:05"
+            }
+        }
     },
     "bacon": {
-        "liquid": false
+        "liquid": false,
+        "URLs": {
+            "stater bros": "https://www.instacart.com/store/items/item_497512304"
+        },
+        "price": {
+            "stater bros": {
+                "quantity": 16,
+                "qtype": "oz",
+                "price": 4.19,
+                "updated": "2020-06-19 20:55:45"
+            }
+        }
     },
     "honey": {
-        "liquid": true
+        "liquid": true,
+        "URLs": {
+            "stater bros": "https://www.instacart.com/store/items/item_497502784"
+        },
+        "price": {
+            "stater bros": {
+                "quantity": 1,
+                "qtype": "lb",
+                "price": 6.29,
+                "updated": "2020-06-19 21:07:22"
+            }
+        }
     },
     "white pepper": {
         "liquid": false,
@@ -229,25 +691,91 @@
         }
     },
     "green onion": {
-        "liquid": false
+        "liquid": false,
+        "URLs": {
+            "stater bros": "https://www.instacart.com/store/items/item_497489139"
+        },
+        "price": {
+            "stater bros": {
+                "quantity": 1.0,
+                "qtype": "bunch",
+                "price": 0.99,
+                "updated": "2020-06-19 22:18:49"
+            }
+        }
     },
     "black vinegar": {
         "liquid": true
     },
     "egg roll wrappers": {
-        "liquid": false
+        "liquid": false,
+        "URLs": {
+            "stater bros": "https://www.instacart.com/store/items/item_497506367"
+        },
+        "price": {
+            "stater bros": {
+                "quantity": 18,
+                "qtype": "oz",
+                "price": 2.39,
+                "updated": "2020-06-19 21:29:24"
+            }
+        }
     },
     "tortillas": {
-        "liquid": false
+        "liquid": false,
+        "URLs": {
+            "stater bros": "https://www.instacart.com/store/items/item_497504276"
+        },
+        "price": {
+            "stater bros": {
+                "quantity": 10.0,
+                "qtype": "ct",
+                "price": 2.39,
+                "updated": "2020-06-19 21:50:05"
+            }
+        }
     },
     "white vinegar": {
-        "liquid": true
+        "liquid": true,
+        "URLs": {
+            "stater bros": "https://www.instacart.com/store/items/item_497507630?context=low_stock_item"
+        },
+        "price": {
+            "stater bros": {
+                "quantity": 16,
+                "qtype": "fl oz",
+                "price": 0.99,
+                "updated": "2020-06-19 21:25:46"
+            }
+        }
     },
     "roasted peanuts": {
-        "liquid": false
+        "liquid": false,
+        "URLs": {
+            "stater bros": "https://www.instacart.com/store/items/item_497487699"
+        },
+        "price": {
+            "stater bros": {
+                "quantity": 16,
+                "qtype": "oz",
+                "price": 4.19,
+                "updated": "2020-06-19 20:59:02"
+            }
+        }
     },
     "fish sauce": {
-        "liquid": true
+        "liquid": true,
+        "URLs": {
+            "stater bros": "https://www.instacart.com/store/items/item_507944127"
+        },
+        "price": {
+            "stater bros": {
+                "quantity": 8.45,
+                "qtype": "oz",
+                "price": 7.79,
+                "updated": "2020-06-19 21:54:52"
+            }
+        }
     },
     "sugar": {
         "liquid": false,
@@ -264,61 +792,226 @@
         }
     },
     "sweet corn": {
-        "liquid": false
+        "liquid": false,
+        "URLs": {
+            "stater bros": "https://www.instacart.com/store/items/item_497506479"
+        },
+        "price": {
+            "stater bros": {
+                "quantity": 16,
+                "qtype": "oz",
+                "price": 1.66,
+                "updated": "2020-06-19 21:30:01"
+            }
+        }
     },
     "feta cheese": {
-        "liquid": false
+        "liquid": false,
+        "URLs": {
+            "stater bros": "https://www.instacart.com/store/items/item_497512019"
+        },
+        "price": {
+            "stater bros": {
+                "quantity": 12.0,
+                "qtype": "oz",
+                "price": 9.39,
+                "updated": "2020-06-19 22:17:09"
+            }
+        }
     },
     "peanuts": {
-        "liquid": false
+        "liquid": false,
+        "URLs": {
+            "stater bros": "https://www.instacart.com/store/items/item_497487699"
+        },
+        "price": {
+            "stater bros": {
+                "quantity": 16.0,
+                "qtype": "oz",
+                "price": 4.19,
+                "updated": "2020-06-19 21:56:19"
+            }
+        }
     },
     "chili oil": {
         "liquid": true
     },
     "shallots": {
-        "liquid": false
+        "liquid": false,
+        "URLs": {
+            "stater bros": "https://www.instacart.com/store/items/item_497485623"
+        },
+        "price": {
+            "stater bros": {
+                "quantity": 1,
+                "qtype": "item",
+                "price": 0.41,
+                "updated": "2020-06-19 22:04:40"
+            }
+        }
     },
     "minced garlic": {
-        "liquid": false
+        "liquid": false,
+        "URLs": {
+            "stater bros": "https://www.instacart.com/store/items/item_497499201"
+        },
+        "price": {
+            "stater bros": {
+                "quantity": 32,
+                "qtype": "oz",
+                "price": 6.29,
+                "updated": "2020-06-19 21:07:55"
+            }
+        }
     },
     "sesame oil": {
         "liquid": true
     },
     "lemon juice": {
-        "liquid": true
+        "liquid": true,
+        "URLs": {
+            "stater bros": "https://www.instacart.com/store/items/item_497507505"
+        },
+        "price": {
+            "stater bros": {
+                "quantity": 32.0,
+                "qtype": "fl oz",
+                "price": 3.19,
+                "updated": "2020-06-19 22:09:38"
+            }
+        }
     },
     "soy sauce": {
-        "liquid": true
+        "liquid": true,
+        "URLs": {
+            "stater bros": "https://www.instacart.com/store/items/item_497490010"
+        },
+        "price": {
+            "stater bros": {
+                "quantity": 20,
+                "qtype": "fl oz",
+                "price": 4.49,
+                "updated": "2020-06-19 20:57:08"
+            }
+        }
     },
     "peanut butter": {
-        "liquid": false
+        "liquid": false,
+        "URLs": {
+            "stater bros": "https://www.instacart.com/store/items/item_497513640"
+        },
+        "price": {
+            "stater bros": {
+                "quantity": 40,
+                "qtype": "oz",
+                "price": 4.89,
+                "updated": "2020-06-19 20:57:58"
+            }
+        }
     },
     "wonton wrappers": {
-        "liquid": false
+        "liquid": false,
+        "URLs": {
+            "stater bros": "https://www.instacart.com/store/items/item_497513361"
+        },
+        "price": {
+            "stater bros": {
+                "quantity": 14.0,
+                "qtype": "oz",
+                "price": 1.99,
+                "updated": "2020-06-19 21:53:55"
+            }
+        }
     },
     "packet gelatin": {
         "liquid": false
     },
     "mango chunks": {
-        "liquid": false
+        "liquid": false,
+        "URLs": {
+            "stater bros": "https://www.instacart.com/store/items/item_497500596"
+        },
+        "price": {
+            "stater bros": {
+                "quantity": 16,
+                "qtype": "oz",
+                "price": 4.19,
+                "updated": "2020-06-19 21:36:16"
+            }
+        }
     },
     "cinammon": {
         "liquid": false
     },
     "country bread": {
-        "liquid": false
+        "liquid": false,
+        "URLs": {
+            "stater bros": "https://www.instacart.com/store/items/item_635540670?eligible_i"
+        },
+        "price": {
+            "stater bros": {
+                "quantity": 22.0,
+                "qtype": "oz",
+                "price": 3.19,
+                "updated": "2020-06-19 22:21:28"
+            }
+        }
     },
     "shrimp": {
-        "liquid": false
+        "liquid": false,
+        "URLs": {
+            "stater bros": "https://www.instacart.com/store/items/item_497501728"
+        },
+        "price": {
+            "stater bros": {
+                "quantity": 16,
+                "qtype": "oz",
+                "price": 10.39,
+                "updated": "2020-06-19 21:06:47"
+            }
+        }
     },
     "tofu": {
-        "liquid": false
+        "liquid": false,
+        "URLs": {
+            "stater bros": "https://www.instacart.com/store/items/item_497513762"
+        },
+        "price": {
+            "stater bros": {
+                "quantity": 16,
+                "qtype": "oz",
+                "price": 1.59,
+                "updated": "2020-06-19 21:26:38"
+            }
+        }
     },
     "garlic": {
-        "liquid": false
+        "liquid": false,
+        "URLs": {
+            "stater bros": "https://www.instacart.com/store/items/item_497519075?context=low_stock_item"
+        },
+        "price": {
+            "stater bros": {
+                "quantity": 3,
+                "qtype": "count bag",
+                "price": 1.29,
+                "updated": "2020-06-19 21:26:59"
+            }
+        }
     },
     "yellow onion": {
-        "liquid": false
+        "liquid": false,
+        "URLs": {
+            "stater bros": "https://www.instacart.com/store/items/item_497500760?context=low_stock_item"
+        },
+        "price": {
+            "stater bros": {
+                "quantity": 2.0,
+                "qtype": "lb",
+                "price": 3.19,
+                "updated": "2020-06-19 22:12:38"
+            }
+        }
     },
     "ginger": {
         "liquid": false,
@@ -338,63 +1031,261 @@
         "liquid": false
     },
     "strawberry jam": {
-        "liquid": true
+        "liquid": true,
+        "URLs": {
+            "stater bros": "https://www.instacart.com/store/items/item_497510183"
+        },
+        "price": {
+            "stater bros": {
+                "quantity": 18.0,
+                "qtype": "oz",
+                "price": 2.59,
+                "updated": "2020-06-19 21:52:59"
+            }
+        }
     },
     "medium tomatoes": {
-        "liquid": false
+        "liquid": false,
+        "URLs": {
+            "stater bros": "https://www.instacart.com/store/items/item_497487200"
+        },
+        "price": {
+            "stater bros": {
+                "quantity": 1,
+                "qtype": "lb",
+                "price": 3.19,
+                "updated": "2020-06-19 22:05:45"
+            }
+        }
     },
     "white bread": {
-        "liquid": false
+        "liquid": false,
+        "URLs": {
+            "stater bros": "https://www.instacart.com/store/items/item_497503461"
+        },
+        "price": {
+            "stater bros": {
+                "quantity": 20.0,
+                "qtype": "oz",
+                "price": 3.19,
+                "updated": "2020-06-19 21:53:28"
+            }
+        }
     },
     "cilantro": {
-        "liquid": false
+        "liquid": false,
+        "URLs": {
+            "stater bros": "https://www.instacart.com/store/items/item_497486693"
+        },
+        "price": {
+            "stater bros": {
+                "quantity": 1,
+                "qtype": "each",
+                "price": 0.99,
+                "updated": "2020-06-19 21:55:55"
+            }
+        }
     },
     "rice vinegar": {
-        "liquid": true
+        "liquid": true,
+        "URLs": {
+            "stater bros": "https://www.instacart.com/store/items/item_497505255"
+        },
+        "price": {
+            "stater bros": {
+                "quantity": 12,
+                "qtype": "fl oz",
+                "price": 3.19,
+                "updated": "2020-06-19 20:56:40"
+            }
+        }
     },
     "cinnamon": {
-        "liquid": false
+        "liquid": false,
+        "URLs": {
+            "stater bros": "https://www.instacart.com/store/items/item_497503923"
+        },
+        "price": {
+            "stater bros": {
+                "quantity": 7.12,
+                "qtype": "oz",
+                "price": 8.39,
+                "updated": "2020-06-19 21:45:18"
+            }
+        }
     },
     "Gruyere cheese": {
-        "liquid": false
+        "liquid": false,
+        "URLs": {
+            "stater bros": "https://www.instacart.com/store/items/item_497517622?eligible_id=d75bf1d9-6ade-42c9-aa06-d5df3248144a&page_type=search&placement_type=boosted_search"
+        },
+        "price": {
+            "stater bros": {
+                "quantity": 6.0,
+                "qtype": "oz",
+                "price": 9.39,
+                "updated": "2020-06-19 22:07:51"
+            }
+        }
     },
     "green beans": {
-        "liquid": false
+        "liquid": false,
+        "URLs": {
+            "stater bros": "https://www.instacart.com/store/items/item_497488558"
+        },
+        "price": {
+            "stater bros": {
+                "quantity": 10,
+                "qtype": "oz",
+                "price": 1.99,
+                "updated": "2020-06-19 21:35:42"
+            }
+        }
     },
     "sesame seeds": {
-        "liquid": false
+        "liquid": false,
+        "URLs": {
+            "stater bros": "https://www.instacart.com/store/items/item_497494560"
+        },
+        "price": {
+            "stater bros": {
+                "quantity": 1.0,
+                "qtype": "oz",
+                "price": 1.09,
+                "updated": "2020-06-19 21:46:50"
+            }
+        }
     },
     "hoisin sauce": {
-        "liquid": true
+        "liquid": true,
+        "URLs": {
+            "stater bros": "https://www.instacart.com/store/items/item_497493996"
+        },
+        "price": {
+            "stater bros": {
+                "quantity": 12,
+                "qtype": "oz",
+                "price": 3.49,
+                "updated": "2020-06-19 21:13:12"
+            }
+        }
     },
     "fresh parsley": {
-        "liquid": false
+        "liquid": false,
+        "URLs": {
+            "stater bros": "https://www.instacart.com/store/items/item_497490377"
+        },
+        "price": {
+            "stater bros": {
+                "quantity": 1.0,
+                "qtype": "bunch",
+                "price": 0.99,
+                "updated": "2020-06-19 22:07:33"
+            }
+        }
     },
     "carrots": {
-        "liquid": false
+        "liquid": false,
+        "URLs": {
+            "stater bros": "https://www.instacart.com/store/items/item_497482813"
+        },
+        "price": {
+            "stater bros": {
+                "quantity": 1,
+                "qtype": "item",
+                "price": 0.27,
+                "updated": "2020-06-19 21:28:55"
+            }
+        }
     },
     "pepper": {
         "liquid": false
     },
     "fresh thyme": {
-        "liquid": false
+        "liquid": false,
+        "URLs": {
+            "stater bros": "https://www.instacart.com/store/items/item_497494905"
+        },
+        "price": {
+            "stater bros": {
+                "quantity": 0.25,
+                "qtype": "oz",
+                "price": 0.99,
+                "updated": "2020-06-19 22:19:49"
+            }
+        }
     },
     "green bell pepper": {
-        "liquid": false
+        "liquid": false,
+        "URLs": {
+            "stater bros": "https://www.instacart.com/store/items/item_497484826"
+        },
+        "price": {
+            "stater bros": {
+                "quantity": 48,
+                "qtype": "ct",
+                "price": 0.99,
+                "updated": "2020-06-19 21:33:38"
+            }
+        }
     },
     "cashews": {
-        "liquid": false
+        "liquid": false,
+        "URLs": {
+            "stater bros": "https://www.instacart.com/store/items/item_497501986"
+        },
+        "price": {
+            "stater bros": {
+                "quantity": 8,
+                "qtype": "oz",
+                "price": 4.69,
+                "updated": "2020-06-19 21:32:06"
+            }
+        }
     },
     "chili sauce": {
-        "liquid": true
+        "liquid": true,
+        "URLs": {
+            "stater bros": "https://www.instacart.com/store/items/item_497501367"
+        },
+        "price": {
+            "stater bros": {
+                "quantity": 28,
+                "qtype": "oz",
+                "price": 4.19,
+                "updated": "2020-06-19 20:56:10"
+            }
+        }
     },
     "mirin": {
-        "liquid": true
+        "liquid": true,
+        "URLs": {
+            "stater bros": "https://www.instacart.com/store/items/item_502301945"
+        },
+        "price": {
+            "stater bros": {
+                "quantity": 10.0,
+                "qtype": "fl oz",
+                "price": 4.49,
+                "updated": "2020-06-19 22:18:29"
+            }
+        }
     },
     "garlic chili sauce": {
         "liquid": true
     },
     "raspberries": {
-        "liquid": false
+        "liquid": false,
+        "URLs": {
+            "stater bros": "https://www.instacart.com/store/items/item_497517257"
+        },
+        "price": {
+            "stater bros": {
+                "quantity": 6,
+                "qtype": "oz container",
+                "price": 1.5,
+                "updated": "2020-06-19 21:38:15"
+            }
+        }
     }
 }

@@ -15,18 +15,7 @@
         "liquid": false
     },
     "cornstarch": {
-        "liquid": false,
-        "URLs": {
-            "stater bros": "https://www.instacart.com/store/items/item_497499992"
-        },
-        "price": {
-            "stater bros": {
-                "quantity": "16",
-                "qtype": "oz",
-                "price": 1.29,
-                "updated": "2020-06-19 19:59:13"
-            }
-        }
+        "liquid": false
     },
     "red bell pepper": {
         "liquid": false
@@ -50,18 +39,7 @@
         "liquid": true
     },
     "chicken broth": {
-        "liquid": true,
-        "URLs": {
-            "stater bros": "https://www.instacart.com/store/items/item_497509603"
-        },
-        "price": {
-            "stater bros": {
-                "quantity": "32",
-                "qtype": "fl oz",
-                "price": 2.99,
-                "updated": "2020-06-19 19:54:50"
-            }
-        }
+        "liquid": true
     },
     "egg": {
         "liquid": false
@@ -106,18 +84,7 @@
         "liquid": false
     },
     "eggs": {
-        "liquid": false,
-        "URLs": {
-            "stater bros": "https://www.instacart.com/store/items/item_497514930"
-        },
-        "price": {
-            "stater bros": {
-                "quantity": "18",
-                "qtype": "ct",
-                "price": 4.19,
-                "updated": "2020-06-19 19:59:48"
-            }
-        }
+        "liquid": false
     },
     "peas": {
         "liquid": false
@@ -162,18 +129,7 @@
         "liquid": false
     },
     "scallions": {
-        "liquid": false,
-        "URLs": {
-            "stater bros": "https://www.instacart.com/store/items/item_497489139"
-        },
-        "price": {
-            "stater bros": {
-                "quantity": "1",
-                "qtype": "bunch",
-                "price": 0.99,
-                "updated": "2020-06-19 20:01:49"
-            }
-        }
+        "liquid": false
     },
     "bean sprouts": {
         "liquid": false
@@ -215,18 +171,7 @@
         "liquid": true
     },
     "white pepper": {
-        "liquid": false,
-        "URLs": {
-            "stater bros": "https://www.instacart.com/store/items/item_497494924"
-        },
-        "price": {
-            "stater bros": {
-                "quantity": "0.5",
-                "qtype": "oz",
-                "price": 1.29,
-                "updated": "2020-06-19 19:58:40"
-            }
-        }
+        "liquid": false
     },
     "green onion": {
         "liquid": false
@@ -250,18 +195,7 @@
         "liquid": true
     },
     "sugar": {
-        "liquid": false,
-        "URLs": {
-            "stater bros": "https://www.instacart.com/store/items/item_497490367"
-        },
-        "price": {
-            "stater bros": {
-                "quantity": "4",
-                "qtype": "lb",
-                "price": 3.39,
-                "updated": "2020-06-19 19:57:58"
-            }
-        }
+        "liquid": false
     },
     "sweet corn": {
         "liquid": false
@@ -321,18 +255,7 @@
         "liquid": false
     },
     "ginger": {
-        "liquid": false,
-        "URLs": {
-            "stater bros": "https://www.instacart.com/store/items/item_497479951"
-        },
-        "price": {
-            "stater bros": {
-                "quantity": 1,
-                "qtype": "lb",
-                "price": 3.49,
-                "updated": "2020-06-19 19:57:07"
-            }
-        }
+        "liquid": false
     },
     "garlic clove": {
         "liquid": false

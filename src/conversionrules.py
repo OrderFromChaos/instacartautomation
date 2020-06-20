@@ -48,7 +48,22 @@ specific_preferred = {
     'wonton wrappers': 'oz',
     'chicken breasts': 'lb',
     'shallots': 'item',
-    'medium tomatoes': 'lb'
+    'medium tomatoes': 'lb',
+    'whole milk': 'gal',
+    'fresh basil': 'each',
+    'fresh parsley': 'bunch',
+    'Gruyere cheese': 'oz',
+    'cherry tomatoes': 'lb',
+    'arugula': 'oz container',
+    'fresh mint': 'oz',
+    'fresh chives': 'each',
+    'ground cumin': 'oz',
+    'smoked paprika': 'oz',
+    'red pepper flakes': 'oz',
+    'farro': 'oz',
+    'tomato': 'lb',
+    'thyme': 'oz',
+    'country bread': 'oz'
 }
 
 special_ingredients = {
@@ -84,7 +99,22 @@ special_ingredients = {
     'wonton wrappers',
     'chicken breasts',
     'shallots',
-    'medium tomatoes'
+    'medium tomatoes',
+    'whole milk',
+    'fresh basil',
+    'fresh parsley',
+    'Gruyere cheese',
+    'cherry tomatoes',
+    'arugula',
+    'fresh mint',
+    'fresh chives',
+    'ground cumin',
+    'smoked paprika',
+    'red pepper flakes',
+    'farro',
+    'tomato',
+    'fresh thyme',
+    'country bread'
 }
 # dict of string: defaultdict
 special_rules = {i: defaultdict(list) for i in special_ingredients}
@@ -95,6 +125,12 @@ special_rules['ginger']['lb'].append(('tsp', 60))
 special_rules['ginger']['lb'].append(('cup', 20/16))
 # TODO: Add "inches" of ginger
 special_rules['scallions']['bunch'].append(('', 4))
+special_rules['fresh basil']['each'].append(('tbsp', 7)) # guesstimate
+special_rules['fresh parsley']['bunch'].append(('tbsp', 6)) # guesstimate
+special_rules['fresh mint']['oz'].append(('tbsp', 4*4))
+special_rules['fresh mint']['oz'].append(('tsp', 4*4*3))
+special_rules['fresh chives']['each'].append(('tsp', 4*3))
+special_rules['fresh thyme']['oz'].append(('tsp', 4*4*3))
 
 # Source: old code
 special_rules['peanut butter']['oz'].append(('tbsp', 1.77))
@@ -121,7 +157,7 @@ special_rules['cremini mushrooms']['lb'].append(('', 24))
 # Source: https://www.atcoblueflamekitchen.com/en-ca/how-to/cups-medium-large-onion.html
 special_rules['sweet onion'][''].append(('cup', 2))
 
-# Source: https://www.aqua-calc.com/calculate/food-weight-to-volume
+# Source: https://www.aqua-calc.com/calculate/food-volume-to-weight
 special_rules['white pepper']['oz'].append(('tsp', 42.25/3.53))
 special_rules['cornstarch']['oz'].append(('tbsp', 0.12))
 special_rules['cornstarch']['oz'].append(('tsp', 0.12*3))
@@ -142,6 +178,13 @@ special_rules['cinnamon']['tsp'].append(('oz', 5.42/48))
 special_rules['sesame seeds']['tsp'].append(('oz', 9.03/48))
 special_rules['shredded cheese']['tbsp'].append(('oz', 3.95/16))
 special_rules['milk']['gal'].append(('oz', 45.5))
+special_rules['whole milk']['gal'].append(('oz', 45.5))
+special_rules['Gruyere cheese']['cup'].append(('oz', 7.64))
+special_rules['cherry tomatoes']['cup'].append(('lb', 0.33))
+special_rules['arugula']['cup'].append(('oz container', 0.71))
+special_rules['smoked paprika']['tsp'].append(('oz', 3.84/48))
+special_rules['red pepper flakes']['tsp'].append(('oz', 2.99/48))
+special_rules['farro']['cup'].append(('oz', 4.77))
 
 # Source: https://grocery.walmart.com/ip/Wonder-Classic-White-Bread-20-oz-Loaf/37858875
 special_rules['white bread']['oz'].append(('slices', 1))
@@ -151,6 +194,11 @@ special_rules['shallots']['item'].append(('tbsp', 4)) # assuming medium shallot
 
 # Source: https://www.thespruceeats.com/tomato-equivalents-1807482
 special_rules['medium tomatoes']['lb'].append(('', 3))
+special_rules['tomato']['lb'].append(('', 3))
+
+# Source: https://www.alliedkenco.com/pdf/Spice%20Conversions.pdf
+special_rules['ground cumin']['oz'].append(('tbsp', 4))
+special_rules['ground cumin']['oz'].append(('tsp', 4*3))
 
 # Source: ????
 special_rules['chicken']['cup'].append(('lb', 5.25/16))
@@ -159,6 +207,7 @@ special_rules['egg roll wrappers']['oz'].append(('', 50/18))
 special_rules['raspberries']['pinch'].append(('oz container', 2)) # workaround for raspberries
 special_rules['wonton wrappers']['oz'].append(('', 40/14))
 special_rules['chicken breasts']['lb'].append(('', 2))
+special_rules['country bread']['oz'].append(('', 15/22))
 
 # defaultdict
 liquid_rules = defaultdict(list)

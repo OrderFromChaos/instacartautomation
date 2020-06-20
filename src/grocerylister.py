@@ -11,7 +11,7 @@ def generateGroceryList(request):
     ingredients = dict()
 
     for recipe, quant in request:
-        print(recipe)
+        # print(recipe)
         for ing in db[recipe]['ingredients']:
             data = db[recipe]['ingredients'][ing]
             ingobj = Ingredient(

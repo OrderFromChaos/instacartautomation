@@ -50,7 +50,7 @@ def updatePrices(inglist, store):
         else:
             break
     else:
-        print('All prices updated within PRICECOOLDOWN.')
+        # print('All prices updated within PRICECOOLDOWN.')
         return
     
     # Initialize browser
@@ -193,10 +193,10 @@ def computePrice(inglist, store):
         total += cost
         itemized[ing] = cost
         
-        print(inglist[ing])
-        print(f'    {round(cost, 2)}')
+    #     print(inglist[ing])
+    #     print(f'    {round(cost, 2)}')
     
-    print(f'Total: {round(total, 2)}')
+    # print(f'Total: {round(total, 2)}')
 
     return itemized
 
@@ -210,7 +210,7 @@ if __name__ == "__main__":
     request = [[x, 1] for x in recipes]
 
     # request = [
-    #     ['Dan Dan Noodles', 1]
+    #     ['Herbed Frittata with Cherry Tomatoes', 1]
     # ]
 
     ingredients = generateGroceryList(request)

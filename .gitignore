@@ -2,3 +2,4 @@
 __pycache__/
 *.pyc
 databases/passwords.json
+*.bak

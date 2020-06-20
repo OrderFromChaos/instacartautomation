@@ -115,7 +115,7 @@ def updatePrices(inglist, store):
         # Differentiate between types
         if quantdivfound:
             quantinfo = quantinfo.split(' ')
-            quant = quantinfo[0]
+            quant = int(quantinfo[0])
             qtype = ' '.join(quantinfo[1:]).strip()
         else:
             quant = 1

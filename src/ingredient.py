@@ -103,7 +103,7 @@ class Ingredient:
         return self
     
     def __repr__(self):
-        return str((self.name,self.quantity,self.qtype)) # Done the lazy way
+        return str((self.name,round(self.quantity, 2),self.qtype)) # Done the lazy way
     
     def __mul__(self, factor): # Right multiplication by scalar
         self.quantity *= factor

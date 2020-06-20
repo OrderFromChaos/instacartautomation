@@ -174,6 +174,8 @@ def computePrice(inglist, store):
         print(inglist[ing])
         print(f'    {round(cost, 2)}')
     
+    print(f'Total: {round(total, 2)}')
+
     return itemized
 
 

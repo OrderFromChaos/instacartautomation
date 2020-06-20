@@ -263,6 +263,7 @@ def obtain_needed(needed):
     password_box = find_css('#login_with_password_form_password')
     username_box.send_keys('snore001@ucr.edu')
     password_box.send_keys('Ww9H3MbZUze4jhR')
+    # I changed this password, so don't expect it to work ^^
     sleep(1) # So it doesn't look like I'm a robot
     submit_button = find_xpath('//*[@id="signup-widget"]/div/div/div/div[4]/form/div/button')
     submit_button.click()

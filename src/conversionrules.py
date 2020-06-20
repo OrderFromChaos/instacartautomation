@@ -22,7 +22,10 @@ special_ingredients = {
     'yellow onion',
     'bacon',
     'cremini mushrooms',
-    'chicken'
+    'chicken',
+    'white pepper',
+    'cornstarch',
+    'scallions'
 }
 # dict of string: defaultdict
 special_rules = {i: defaultdict(list) for i in special_ingredients}
@@ -32,6 +35,7 @@ special_rules['ginger']['lb'].append(('tbsp', 20))
 special_rules['ginger']['lb'].append(('tsp', 60))
 special_rules['ginger']['lb'].append(('cup', 20/16))
 # TODO: Add "inches" of ginger
+special_rules['scallions']['bunch'].append(('', 4))
 
 # Source: old code
 special_rules['peanut butter']['oz'].append(('tbsp', 1.77))
@@ -57,6 +61,11 @@ special_rules['cremini mushrooms']['oz'].append(('', 24/16))
 # Source: https://www.atcoblueflamekitchen.com/en-ca/how-to/cups-medium-large-onion.html
 special_rules['sweet onion'][''].append(('cup', 2))
 
+# Source: https://www.aqua-calc.com/calculate/food-weight-to-volume
+special_rules['white pepper']['oz'].append(('tsp', 42.25/3.53))
+special_rules['cornstarch']['oz'].append(('tbsp', 0.12))
+
+# Source: ????
 special_rules['chicken']['cup'].append(('lb', 5.25/16))
 
 # defaultdict
@@ -64,6 +73,7 @@ liquid_rules = defaultdict(list)
 liquid_rules['oz'].append(('tbsp', 2))
 liquid_rules['oz'].append(('tsp', 6))
 liquid_rules['oz'].append(('cup', 1/8))
+liquid_rules['fl oz'].append(('oz', 1))
 
 # defaultdict
 # keep same unit type, like volume -> volume
@@ -72,6 +82,7 @@ general_rules = defaultdict(list)
 general_rules['tbsp'].append(('tsp', 3))
 general_rules['lb'].append(('oz', 16))
 general_rules['cup'].append(('tbsp', 16))
+general_rules['ct'].append(('', 1))
 
 general_rules['pinch'].append(('tsp', 0))
 general_rules['pinch'].append(('tbsp', 0))
@@ -110,7 +121,10 @@ specific_preferred = {
     'yellow onion': '',
     'bacon': 'oz',
     'cremini mushrooms': '',
-    'chicken': 'lb'
+    'chicken': 'lb',
+    'white pepper': 'oz',
+    'cornstarch': 'oz',
+    'scallions': ''
 }
 # TODO: Rewrite Ingredient class to still call this without SPECIALFLAG
 

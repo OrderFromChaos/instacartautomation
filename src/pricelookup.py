@@ -4,6 +4,7 @@ from selenium import webdriver
 import time
 from selenium.common.exceptions import NoSuchElementException
 from datetime import datetime, timedelta
+from ingredient import Ingredient
 
 PRICECOOLDOWN = 12*60 # 12 hrs (minutes)
 # Some ingredients are usually used in pinch quantities and don't
@@ -142,7 +143,39 @@ def computePrice(inglist, store):
     # Actually does the computation and adds everything together
     updatePrices(inglist, store)
 
+    # inglist is our friendly "ingname: Ingredient object" dictionary
+    #    from grocerylister. This makes this process easy.
+
+    with open('../databases/ingdata.json', 'r') as f:
+        ingdata = json.load(f)
+
+    total = 0.00
+    itemized = dict()
+
+    for ing in inglist:
+        if ing in IGNORE:
+            continue
+        
+        buyinfo = ingdata[ing]['price'][store]
+        buyobj = Ingredient(
+            name=ing,
+            quantity=buyinfo['quantity'],
+            qtype=buyinfo['qtype'],
+            liquid=ingdata[ing]['liquid']
+        )
+        price = buyinfo['price']
+
+        buyobj = inglist[ing]._convert(buyobj)
+        # now inglist[ing] and buyobj have the same qtype, so we can simply divide
+        cost = inglist[ing].quantity / buyobj.quantity * price
+        total += cost
+        itemized[ing] = cost
+        
+        print(inglist[ing])
+        print(f'    {round(cost, 2)}')
     
+    return itemized
+
 
 if __name__ == "__main__":
 

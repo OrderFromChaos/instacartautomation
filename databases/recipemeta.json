@@ -1,0 +1,164 @@
+{
+    "Dan Dan Noodles": {
+        "reviewed": true,
+        "meals": 2,
+        "time": 90,
+        "rating": 1.2
+    },
+    "Sweet Chili Shrimp": {
+        "reviewed": false,
+        "meals": 1,
+        "time": 30,
+        "rating": 1
+    },
+    "Shrimp With Lobster Sauce": {
+        "reviewed": false,
+        "meals": 1,
+        "time": 30,
+        "rating": 1
+    },
+    "Egg Drop Soup": {
+        "reviewed": true,
+        "meals": 1,
+        "time": 60,
+        "rating": 1.1
+    },
+    "Lighter Egg Foo Young": {
+        "reviewed": true,
+        "meals": 1,
+        "time": 90,
+        "rating": 1.1
+    },
+    "Vegetable Egg Rolls": {
+        "reviewed": true,
+        "meals": 3,
+        "time": 120,
+        "rating": 0.7
+    },
+    "Pineapple Fried Rice": {
+        "reviewed": false,
+        "meals": 1,
+        "time": 30,
+        "rating": 1
+    },
+    "Easy Vegetable Stir Fry": {
+        "reviewed": false,
+        "meals": 1,
+        "time": 30,
+        "rating": 1
+    },
+    "Mango Pudding": {
+        "reviewed": false,
+        "meals": 1,
+        "time": 30,
+        "rating": 1
+    },
+    "Chicken and Ginger Noodle Soup": {
+        "reviewed": true,
+        "meals": 4,
+        "time": 120,
+        "rating": 0.9
+    },
+    "Braised Pork in Soy Sauce": {
+        "reviewed": false,
+        "meals": 1,
+        "time": 30,
+        "rating": 1
+    },
+    "General Tso's Chicken": {
+        "reviewed": false,
+        "meals": 1,
+        "time": 30,
+        "rating": 1
+    },
+    "Easy Sesame Chicken": {
+        "reviewed": true,
+        "meals": 1,
+        "time": 90,
+        "rating": 1.2
+    },
+    "Breakfast Burrito": {
+        "reviewed": false,
+        "meals": 1,
+        "time": 30,
+        "rating": 1
+    },
+    "Orange French Toast": {
+        "reviewed": false,
+        "meals": 1,
+        "time": 30,
+        "rating": 1
+    },
+    "Quick Fried Wontons": {
+        "reviewed": false,
+        "meals": 1,
+        "time": 30,
+        "rating": 1
+    },
+    "Velvet Chicken": {
+        "reviewed": false,
+        "meals": 1,
+        "time": 30,
+        "rating": 1
+    },
+    "Easy Egg Fried Rice": {
+        "reviewed": false,
+        "meals": 1,
+        "time": 30,
+        "rating": 1
+    },
+    "Easy Chicken Congee with Peanuts": {
+        "reviewed": false,
+        "meals": 1,
+        "time": 30,
+        "rating": 1
+    },
+    "Twice-Cooked Pork": {
+        "reviewed": false,
+        "meals": 1,
+        "time": 30,
+        "rating": 1
+    },
+    "Succulent Shrimp Wontons": {
+        "reviewed": false,
+        "meals": 1,
+        "time": 30,
+        "rating": 1
+    },
+    "Stir-Fried Eggs with Tomato": {
+        "reviewed": false,
+        "meals": 1,
+        "time": 30,
+        "rating": 1
+    },
+    "Herbed Frittata with Cherry Tomatoes": {
+        "reviewed": true,
+        "meals": 1.5,
+        "time": 60,
+        "rating": 1.3
+    },
+    "Shakshuka with Feta and Farro": {
+        "reviewed": false,
+        "meals": 1,
+        "time": 30,
+        "rating": 1
+    },
+    "Asian Noodle Bowl with Poached Egg": {
+        "reviewed": false,
+        "meals": 1,
+        "time": 30,
+        "rating": 1
+    },
+    "Poached Eggs": {
+        "reviewed": false,
+        "meals": 1,
+        "time": 30,
+        "rating": 1
+    },
+    "Eggs Blackstone": {
+        "reviewed": false,
+        "meals": 1,
+        "time": 30,
+        "rating": 1
+    }
+}

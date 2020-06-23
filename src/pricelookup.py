@@ -207,14 +207,24 @@ if __name__ == "__main__":
     with open('../databases/recipedata.json', 'r') as f:
         recipes = json.load(f)
     
-    request = [[x, 1] for x in recipes]
+    request = [
+        ['Shakshuka with Feta and Farro', 1]
+    ]
 
     # request = [
     #     ['Herbed Frittata with Cherry Tomatoes', 1]
     # ]
 
     ingredients = generateGroceryList(request)
-    computePrice(ingredients, "stater bros")
+    itemized = computePrice(ingredients, "stater bros")
+
+    isort = sorted(itemized.items(), key=lambda x: x[1], reverse=True)
+
+    cumulative = 0
+    for i, x in isort:
+        print('{:<20} {}'.format(i, round(x, 2)))
+        cumulative += x
+    print(f'Total: {round(cumulative, 2)}')
 
 # New ingdata.json format:
 #   "ground cumin": {

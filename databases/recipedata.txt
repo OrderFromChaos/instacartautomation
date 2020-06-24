@@ -1,9 +1,6 @@
 Dan Dan Noodles|1tbsp peanut oil,16oz bacon,3tbsp ginger,1cup chicken broth,3tbsp chili sauce,1.5tbsp rice vinegar,3tbsp soy sauce,3tbsp peanut butter,1.5tsp sichuan peppercorns,pinch salt,pinch pepper,12oz egg noodles,0.5oz roasted peanuts,4.5 scallions
-Sweet Chili Shrimp|8oz cellophane noodles,1lb shrimp,2tsp cornstarch,0.5tsp salt,0.25tsp black pepper,1tbsp soy sauce,1tbsp honey,1tbsp rice vinegar,2tbsp chili sauce,1tbsp Shaoxing rice wine,1tbsp peanut oil,2tbsp minced garlic,1tsp ginger
-Shrimp With Lobster Sauce|2tbsp peanut oil,3 garlic cloves,16oz shrimp,4tsp Shaoxing rice wine,2cup chicken broth,0.5tsp sesame oil,0.66tsp sugar,0.66tsp salt,pinch white pepper,0.66cup peas,4tsp cornstarch,2 eggs,2 scallions
 Egg Drop Soup|6cup chicken broth,1tsp Shaoxing rice wine,0.25tsp ginger,1tsp sugar,0.25tsp white pepper,1tbsp cornstarch,2 eggs,pinch salt,1 scallions
 Lighter Egg Foo Young|0.75cup chicken broth,1.5tbsp hoisin sauce,1tbsp cornstarch,3tbsp peanut oil,4 cremini mushrooms,4 scallions,1.5cup bean sprouts,0.25cup bacon,1.5tsp soy sauce,6 eggs
-Vegetable Egg Rolls|2tbsp peanut oil,2 garlic cloves,1tbsp garlic,0.5 sweet onion,1 celery stalk,2 carrots,0.5 cabbage,2tbsp rice vinegar,2tsp soy sauce,1tsp soy sauce,1tsp sugar,50 egg roll wrappers
 Pineapple Fried Rice|3tbsp soy sauce,1tsp sesame oil,2tbsp peanut oil,2 garlic cloves,1 sweet onion,1 carrots,0.5cup sweet corn,0.5cup peas,3cup rice,2cup pineapple,0.5cup bacon,2 scallions,0.25cup cashews,pinch salt,pinch black pepper
 Easy Vegetable Stir Fry|4tbsp soy sauce,2tbsp sugar,1tbsp peanut oil,1.5tsp ginger,1cup cremini mushrooms,1 red bell pepper,1 green bell pepper,2 scallions,1cup broccoli florets,0.5cup green beans
 Mango Pudding|0.5lb mango chunks,0.25cup sugar,1 packet gelatin,0.5cup evaporated milk,pinch raspberries
@@ -21,7 +18,6 @@ Twice-Cooked Pork|1lb pork belly,1tbsp soy sauce,1tbsp Shaoxing rice wine,1tbsp 
 Succulent Shrimp Wontons|0.33lb shrimp,0.25tsp sesame oil,pinch white pepper,pinch salt,20 wonton wrappers,1 eggs
 Stir-Fried Eggs with Tomato|4 eggs,0.25cup cilantro,1tbsp sesame oil,0.5tsp salt,0.125tsp black pepper,2tbsp peanut oil,2tsp garlic,2tbsp shallots,2 medium tomatoes,2tsp Shaoxing rice wine,0.25tsp sugar|Stir-Frying to the Sky's Edge
 Herbed Frittata with Cherry Tomatoes|10 eggs,1tbsp whole milk,1tbsp fresh basil,1tbsp fresh parsley,2tbsp butter,0.25cup Gruyere cheese,0.5cup cherry tomatoes,1.5tbsp olive oil,1.5tbsp lemon juice,3cup arugula,1tsp fresh mint,1tsp fresh chives|The Breakfast Bible
-Shakshuka with Feta and Farro|2tbsp olive oil,0.5 yellow onion,1clove garlic,1 red bell pepper,2tsp ground cumin,0.75tsp smoked paprika,0.25tsp red pepper flakes,28oz diced tomatoes,0.25lb feta cheese,6 eggs,3cup farro,2tbsp fresh parsley|The Breakfast Bible
 Asian Noodle Bowl with Poached Egg|1.5lb udon noodles,4 eggs,4slice bacon,3tbsp soy sauce,2tsp mirin,1tsp sugar,3 scallions
 Poached Eggs|8 eggs
 Eggs Blackstone|4 tomato,1tbsp olive oil,1tsp fresh thyme,8slice bacon,8 country bread,8 eggs,4 eggs,2tbsp lemon juice,1cup butter

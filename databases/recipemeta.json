@@ -5,18 +5,6 @@
         "time": 90,
         "rating": 1.2
     },
-    "Sweet Chili Shrimp": {
-        "reviewed": false,
-        "meals": 1,
-        "time": 30,
-        "rating": 1
-    },
-    "Shrimp With Lobster Sauce": {
-        "reviewed": false,
-        "meals": 1,
-        "time": 30,
-        "rating": 1
-    },
     "Egg Drop Soup": {
         "reviewed": true,
         "meals": 1,
@@ -28,12 +16,6 @@
         "meals": 1,
         "time": 90,
         "rating": 1.1
-    },
-    "Vegetable Egg Rolls": {
-        "reviewed": true,
-        "meals": 3,
-        "time": 120,
-        "rating": 0.7
     },
     "Pineapple Fried Rice": {
         "reviewed": false,
@@ -136,12 +118,6 @@
         "meals": 1.5,
         "time": 60,
         "rating": 1.3
-    },
-    "Shakshuka with Feta and Farro": {
-        "reviewed": false,
-        "meals": 1,
-        "time": 30,
-        "rating": 1
     },
     "Asian Noodle Bowl with Poached Egg": {
         "reviewed": false,

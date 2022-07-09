@@ -1,5 +1,5 @@
 .ipynb_checkpoints/
 __pycache__/
 *.pyc
-databases/passwords.json
+databases/siteconfig.json
 *.bak

@@ -1,9 +1,11 @@
 from ingredient import Ingredient
 import json
 
+
 def generateGroceryList(request):
     with open('../databases/recipedata.json', 'r') as f:
         db = json.load(f)
+    print(db.keys())
 
     with open('../databases/ingdata.json', 'r') as f:
         ingdata = json.load(f)
@@ -27,15 +29,16 @@ def generateGroceryList(request):
                     raise Exception(f'Old:\n{ingredients[ing]}\nNew:\n{ingobj}')
             else:
                 ingredients[ing] = ingobj
-    
+
     return ingredients
+
 
 if __name__ == "__main__":
     request = [
-        ['Egg Drop Soup', 2],
-        ['Orange French Toast', 2],
-        ['Asian Noodle Bowl with Poached Egg', 2],
-        ['Eggs Blackstone', 1]
+        ['Dan Dan Noodles', 2]
+        # ['Easy Sesame Chicken', 1]
+        # ['Asian Noodle Bowl with Poached Egg', 2],
+        # ['Eggs Blackstone', 1]
     ]
 
     ingredients = generateGroceryList(request)

@@ -1,4 +1,4 @@
-from conversionrules import *
+from src.conversionrules import *
     # These are the relevant variables:
     # "X" is either special, liquid, or general
     # X_rules
@@ -7,6 +7,7 @@ from conversionrules import *
     #   it is assumed that recipes will mention the item in its buyable qtype
 from copy import deepcopy
 
+
 class Ingredient:
     def __init__(self, name='', quantity=0, qtype='', liquid=False):
         # qtype examples: "cup", "fl oz", "tbsp"
@@ -14,6 +15,7 @@ class Ingredient:
         self.quantity = quantity
         self.qtype = qtype
         self.liquid = liquid
+
     def _convert(self, other):
         # Converts both sides, updates self, returns other
         assert type(other) == Ingredient, ('Can only do operations between '

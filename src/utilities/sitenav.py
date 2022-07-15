@@ -10,7 +10,9 @@ from selenium.common.exceptions import NoSuchElementException
 from termcolor import cprint
 
 # Internal libraries
-from grocerylister import generateGroceryList
+# root = Path(__file__).absolute().parent.parent.parent.parent
+# import src.grocerylister as grocery
+from ..grocerylister import generateGroceryList
 
 
 
@@ -176,11 +178,22 @@ class WebsiteController:
             self.known_store_urls[self.store] = self.browser.current_url()
 
 
-    def shopAtSingleStore(request, store):
+    def shopAtSingleStore(self, request, store):
         # Create grocery inventory
+        groceries = generateGroceryList(request)
+        self.logIn()
+        for ing in groceries.values():
+            # Look up ing name
+            #   If exists, go to page and add quantity
+            #   If not exists, ask for page and store in DB
+            pass
 
 
-        # Sign in
+    def goToItem(self, store, item_name):
+        # Check if item exists in DB
+        #   if so, navigate to item
+        #   if not, request user input
+        # DOES NOT wait at the end - user is expected to handle timing for this fxn
         pass
 
 
@@ -188,7 +201,7 @@ class WebsiteController:
     # Need to choose DB for:
     # ingredient -> URL
     # price history
-    def updatePrices(self):
+    def updatePrices(self, timeout_days=3):
         pass
 
 
@@ -201,6 +214,6 @@ if __name__ == "__main__":
     c.store = "Draeger's Market"
     # c.goToStore()
     request = [
-        ['Shakshuka with Feta and Farro', 1]
+        ['Dan Dan Noodles', 1]
     ]
     c.shopAtSingleStore(request, "Draeger's Market")

@@ -1,13 +1,14 @@
-from ingredient import Ingredient
 import json
+
+from src.ingredient import Ingredient
 
 
 def generateGroceryList(request):
-    with open('../databases/recipedata.json', 'r') as f:
+    with open('databases/recipedata.json', 'r') as f:
         db = json.load(f)
-    print(db.keys())
+    # print(db.keys())
 
-    with open('../databases/ingdata.json', 'r') as f:
+    with open('databases/ingdata.json', 'r') as f:
         ingdata = json.load(f)
 
     ingredients = dict()

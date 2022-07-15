@@ -1,10 +1,13 @@
-from grocerylister import generateGroceryList
 import json
-from selenium import webdriver
 import time
-from selenium.common.exceptions import NoSuchElementException
 from datetime import datetime, timedelta
-from ingredient import Ingredient
+
+from selenium import webdriver
+from selenium.common.exceptions import NoSuchElementException
+
+from src.grocerylister import generateGroceryList
+from src.ingredient import Ingredient
+
 
 PRICECOOLDOWN = 24*7 # 1 week worth of hours 
 # Some ingredients are usually used in pinch quantities and don't

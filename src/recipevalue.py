@@ -1,6 +1,8 @@
-from grocerylister import generateGroceryList
-from pricelookup import computePrice
 import json
+
+from src.grocerylister import generateGroceryList
+from src.pricelookup import computePrice
+
 
 # Hyperparams
 hourlyrate = 3 # in dollars

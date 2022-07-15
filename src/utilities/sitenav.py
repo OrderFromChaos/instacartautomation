@@ -9,6 +9,9 @@ from selenium.webdriver.common.by import By
 from selenium.common.exceptions import NoSuchElementException
 from termcolor import cprint
 
+# Internal libraries
+from grocerylister import generateGroceryList
+
 
 
 class WebsiteController:
@@ -31,6 +34,7 @@ class WebsiteController:
         self.browser = None
         self.logged_in = False
         self.store = None
+        self.known_store_urls = {}
 
 
     def _startBrowser(self):
@@ -92,6 +96,14 @@ class WebsiteController:
 
 
     def _tryAlternatives(self, paths, selector, related_idxs, purpose=''):
+        """
+        Given a list of paths, try each one. Meant to defeat sites with div location fuzzing.
+
+        Selector is a selenium.webdriver.common.by.By object (ex. By.XPATH)
+        Related_idxs lets _tryAlternatives to know what information to return with each path - eg. an index.
+            (In the future it could automatically detect what makes each path unique, but this would be complex behavior.)
+        Purpose is for error logging.
+        """
         assert len(paths) == len(related_idxs)
 
         functioning_idx = None
@@ -109,53 +121,68 @@ class WebsiteController:
         return alternative_obj, functioning_idx
 
 
-    def goToStore(self):
-        if self.store is None:
-            raise RuntimeError('Need to set obj.store first')
-
+    def goToStore(self, store):
+        """
+        Go to the "store" landing page and set self.store.
+        """
+        self.store = store
         self.logIn()
 
-        # Go to store listing page
-        store_url = 'https://www.instacart.com/store'
-        if self.browser.current_url != store_url:
-            self.browser.get(store_url)
-            time.sleep(5)
-
-        # TODO: Check for pop-up on store page and close
-        pass
-
-        # Get list of stores
-        store_path_alternatives = [
-            '/html/body/div[1]/div[1]/div[2]/div/div/div[18]/div/ul',
-            '/html/body/div[1]/div[2]/div[2]/div/div/div[18]/div/ul',
-        ]
-        store_list_obj, functioning_idx = self._tryAlternatives(
-            store_path_alternatives,
-            By.XPATH,
-            [1, 2],
-            purpose='store name lookup'
-        )
-
-        # Get store names from list
-        found_elt = store_list_obj.find_elements(By.TAG_NAME, 'li')
-        store_idx_lookup = {}
-        for idx in range(1, len(found_elt) + 1):
-            store_element = self.find_xpath(f'/html/body/div[1]/div[{functioning_idx}]/div[2]/div/div/div[18]/div/ul/li[{idx}]/a/span/span[2]/span[1]/span')
-            store_idx_lookup[store_element.text.strip().lower()] = idx
-
-        # Click on store matching target name
-        target_name = self.store.lower()
-        if target_name in store_idx_lookup:
-            target_idx = store_idx_lookup[target_name]
-            print(f'Matched {target_name} to {target_idx}')
+        if self.store in self.known_store_urls:
+            self.browser.get(self.known_store_urls[self.store])
         else:
-            for store_name, idx in store_idx_lookup.items():
-                print(idx, store_name)
-            raise RuntimeError(f'Unable to locate store "{target_name}"! Valid names are printed above ^^')
-        target_store = self.find_xpath(f'/html/body/div[1]/div[{functioning_idx}]/div[2]/div/div/div[18]/div/ul/li[{target_idx}]')
-        target_store.click()
+            # Go to store listing page
+            store_url = 'https://www.instacart.com/store'
+            if self.browser.current_url != store_url:
+                self.browser.get(store_url)
+                time.sleep(5)
+
+            # TODO: Check for pop-up on store page and close
+            pass
+
+            # Get list of stores
+            store_path_alternatives = [
+                '/html/body/div[1]/div[1]/div[2]/div/div/div[18]/div/ul',
+                '/html/body/div[1]/div[2]/div[2]/div/div/div[18]/div/ul',
+            ]
+            store_list_obj, functioning_idx = self._tryAlternatives(
+                store_path_alternatives,
+                By.XPATH,
+                [1, 2],
+                purpose='store name lookup'
+            )
+
+            # Get store names from list
+            found_elt = store_list_obj.find_elements(By.TAG_NAME, 'li')
+            store_idx_lookup = {}
+            for idx in range(1, len(found_elt) + 1):
+                store_element = self.find_xpath(f'/html/body/div[1]/div[{functioning_idx}]/div[2]/div/div/div[18]/div/ul/li[{idx}]/a/span/span[2]/span[1]/span')
+                store_idx_lookup[store_element.text.strip().lower()] = idx
+
+            # Click on store matching target name
+            target_name = self.store.lower()
+            if target_name in store_idx_lookup:
+                target_idx = store_idx_lookup[target_name]
+                print(f'Matched {target_name} to {target_idx}')
+            else:
+                for store_name, idx in store_idx_lookup.items():
+                    print(idx, store_name)
+                raise RuntimeError(f'Unable to locate store "{target_name}"! Valid names are printed above ^^')
+            target_store = self.find_xpath(f'/html/body/div[1]/div[{functioning_idx}]/div[2]/div/div/div[18]/div/ul/li[{target_idx}]')
+            target_store.click()
 
         time.sleep(5)
+        if self.store not in self.known_store_urls:
+            self.known_store_urls[self.store] = self.browser.current_url()
+
+
+    def shopAtSingleStore(request, store):
+        # Create grocery inventory
+
+
+        # Sign in
+        pass
+
 
     # TODO:
     # Need to choose DB for:
@@ -172,4 +199,8 @@ if __name__ == "__main__":
 
     c = WebsiteController(expected_config_loc)
     c.store = "Draeger's Market"
-    c.goToStore()
+    # c.goToStore()
+    request = [
+        ['Shakshuka with Feta and Farro', 1]
+    ]
+    c.shopAtSingleStore(request, "Draeger's Market")

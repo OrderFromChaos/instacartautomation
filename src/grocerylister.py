@@ -8,7 +8,7 @@ def generateGroceryList(request):
         db = json.load(f)
     # print(db.keys())
 
-    with open('databases/ingdata.json', 'r') as f:
+    with open('databases/old/ingdata.json', 'r') as f:
         ingdata = json.load(f)
 
     ingredients = dict()

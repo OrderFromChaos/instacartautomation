@@ -6,6 +6,7 @@ from pathlib import Path
 # Pypi libraries
 import jsonschema
 import pendulum
+from termcolor import cprint
 
 # Local libraries
 from .errors import InstacartError
@@ -25,6 +26,7 @@ PAGE_SCHEMA = {
             'pattern': r'^\d{4}-\d{2}-\d{2}T\d{2}:\d{2}:\d{2}.\d{6}-\d{2}:\d{2}$',
         },
         'preference': {'type': 'number'},
+        'product_name': {'type': 'string'},
     },
     'additionalProperties': False
 }
@@ -56,7 +58,7 @@ INGREDIENT_SCHEMA = {
 class DBManager:
     def __init__(self):
         self.store_listing_db = None
-        self.store_listing_db_loc = Path('databases') / 'store_listings.json'
+        self.store_listing_db_loc = Path('databases') / 'store_listing.json'
 
         def writeStoreListingDBToFile():
             if isinstance(self.store_listing_db, dict):
@@ -81,6 +83,8 @@ class DBManager:
                     db = json.load(f)
             
             self.store_listing_db = db
+        
+            cprint('Loaded store listing DB!', 'blue')
 
 
     def addExternalItemToStoreListingDB(self, ing, warn=True):
@@ -114,6 +118,8 @@ class DBManager:
         assert isinstance(store, str), f'ingredient must be of type str, got {type(store)}'
         assert isinstance(entry, dict), f'ingredient must be of type dict, got {type(entry)}'
 
+        entry['updated'] = pendulum.now().isoformat()
+
         if ing not in self.store_listing_db:
             liquid = askBoolean(f'Is "{ing}" a liquid?')
 
@@ -133,6 +139,7 @@ class DBManager:
                 self.store_listing_db[ing]['URLs'][store] = []
             self.store_listing_db[ing]['URLs'][store].append(entry)
     
+
     def getHighestPri(self, ing, store):
         self.loadStoreListingDB()
 
@@ -160,9 +167,9 @@ if __name__ == '__main__':
             'URL': "https://www.instacart.com/store/items/item_497524991",
             "quantity": 1,
             "qtype": "each",
-            "price": 2.99,
-            "updated": pendulum.now().isoformat(),
-            "preference": 5,
+            "price": 299, # dollars in 100s place, cents in 10s/1s
+            "preference": 1,
+            "product_name": "Fresh Organic Planter's Basil",
         }
     ] 
 

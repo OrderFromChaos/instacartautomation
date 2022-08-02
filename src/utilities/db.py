@@ -56,9 +56,12 @@ INGREDIENT_SCHEMA = {
 
 
 class DBManager:
-    def __init__(self):
+    def __init__(self, store_listing_db_loc=None):
         self.store_listing_db = None
-        self.store_listing_db_loc = Path('databases') / 'store_listing.json'
+        if store_listing_db_loc is None:
+            self.store_listing_db_loc = Path('databases') / 'store_listing.json'
+        else:
+            self.store_listing_db_loc = store_listing_db_loc
 
         def writeStoreListingDBToFile():
             if isinstance(self.store_listing_db, dict):
@@ -104,7 +107,7 @@ class DBManager:
             write_dict = {
                 'liquid': liquid,
                 'instacart': False,
-                'URLs': []
+                'URLs': {}
             }
             jsonschema.validate(write_dict, INGREDIENT_SCHEMA)
             self.store_listing_db[ing] = write_dict
@@ -130,6 +133,8 @@ class DBManager:
                     store: [entry]
                 }
             }
+            if entry == {}:
+                write_dict['URLs'][store] = []
             jsonschema.validate(write_dict, INGREDIENT_SCHEMA)
             self.store_listing_db[ing] = write_dict
 
@@ -159,7 +164,7 @@ class DBManager:
 
 
 if __name__ == '__main__':
-    dbm = DBManager()
+    dbm = DBManager(store_listing_db_loc=Path('databases') / 'test_store_listing.json')
     sample_args = [
         'fresh basil',
         'stater bros',
@@ -171,7 +176,8 @@ if __name__ == '__main__':
             "preference": 1,
             "product_name": "Fresh Organic Planter's Basil",
         }
-    ] 
+    ]
+    sample_empty = []
 
     # Case 1
     dbm.store_listing_db = {}
@@ -193,6 +199,20 @@ if __name__ == '__main__':
     dbm.store_listing_db['fresh basil']['URLs']['stater bros'] = []
     try:
         dbm.addURLForStoreAndIngToStoreListingDB(*sample_args)
+    except jsonschema.exceptions.SchemaError as e:
+        raise e
+    print('Successfully validated!')
+
+    # Case 4
+    try:
+        dbm.addURLForStoreAndIngToStoreListingDB('item not found', 'stater bros', {})
+    except jsonschema.exceptions.SchemaError as e:
+        raise e
+    print('Successfully validated!')
+
+    # Case 5
+    try:
+        dbm.addExternalItemToStoreListingDB('sichuan peppercorns')
     except jsonschema.exceptions.SchemaError as e:
         raise e
     print('Successfully validated!')

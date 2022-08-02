@@ -32,5 +32,187 @@
                 }
             ]
         }
+    },
+    "sausage": {
+        "liquid": false,
+        "instacart": true,
+        "URLs": {
+            "Draeger's Market": [
+                {
+                    "URL": "https://www.instacart.com/store/items/item_531364821",
+                    "quantity": 12,
+                    "qtype": "oz",
+                    "price": 949,
+                    "preference": 1,
+                    "product_name": "Aidells Smoked Chicken and Apple Sausage Links",
+                    "updated": "2022-08-01T22:11:41.164432-07:00"
+                }
+            ]
+        }
+    },
+    "ginger": {
+        "liquid": false,
+        "instacart": true,
+        "URLs": {
+            "Draeger's Market": [
+                {
+                    "URL": "https://www.instacart.com/store/items/item_552059888",
+                    "quantity": 6,
+                    "qtype": "oz",
+                    "price": 699,
+                    "preference": 1,
+                    "product_name": "The Ginger People Organic Minced Ginger",
+                    "updated": "2022-08-01T22:14:21.027060-07:00"
+                }
+            ]
+        }
+    },
+    "chicken broth": {
+        "liquid": true,
+        "instacart": true,
+        "URLs": {
+            "Draeger's Market": [
+                {
+                    "URL": "https://www.instacart.com/store/items/item_531369848",
+                    "quantity": 32,
+                    "qtype": "fl oz",
+                    "price": 479,
+                    "preference": 1,
+                    "product_name": "Swanson\u00ae Natural Goodness\u00ae Chicken Broth",
+                    "updated": "2022-08-01T22:21:11.536086-07:00"
+                }
+            ]
+        }
+    },
+    "chili sauce": {
+        "liquid": true,
+        "instacart": true,
+        "URLs": {
+            "Draeger's Market": [
+                {
+                    "URL": "https://www.instacart.com/store/items/item_531364567",
+                    "quantity": 10,
+                    "qtype": "oz",
+                    "price": 369,
+                    "preference": 1,
+                    "product_name": "Tapatio Salsa Picante Hot Sauce",
+                    "updated": "2022-08-01T22:24:54.879588-07:00"
+                }
+            ]
+        }
+    },
+    "rice vinegar": {
+        "liquid": true,
+        "instacart": true,
+        "URLs": {
+            "Draeger's Market": [
+                {
+                    "URL": "https://www.instacart.com/store/items/item_531377645",
+                    "quantity": 24,
+                    "qtype": "oz",
+                    "price": 769,
+                    "preference": 1,
+                    "product_name": "Marukan Genuine Brewed Rice Vinegar",
+                    "updated": "2022-08-01T22:26:24.025968-07:00"
+                }
+            ]
+        }
+    },
+    "soy sauce": {
+        "liquid": true,
+        "instacart": true,
+        "URLs": {
+            "Draeger's Market": [
+                {
+                    "URL": "https://www.instacart.com/store/items/item_531362569",
+                    "quantity": 20,
+                    "qtype": "fl oz",
+                    "price": 629,
+                    "preference": 1,
+                    "product_name": "Kikkoman Less Sodium Soy Sauce",
+                    "updated": "2022-08-01T22:26:57.957612-07:00"
+                }
+            ]
+        }
+    },
+    "peanut butter": {
+        "liquid": false,
+        "instacart": true,
+        "URLs": {
+            "Draeger's Market": [
+                {
+                    "URL": "https://www.instacart.com/store/items/item_531378527",
+                    "quantity": 40,
+                    "qtype": "oz",
+                    "price": 839,
+                    "preference": 1,
+                    "product_name": "SKIPPY Peanut Butter, Creamy",
+                    "updated": "2022-08-01T22:27:54.114379-07:00"
+                }
+            ]
+        }
+    },
+    "sichuan peppercorns": {
+        "liquid": false,
+        "instacart": false,
+        "URLs": {}
+    },
+    "salt": {
+        "liquid": false,
+        "instacart": false,
+        "URLs": {}
+    },
+    "pepper": {
+        "liquid": false,
+        "instacart": false,
+        "URLs": {}
+    },
+    "egg noodles": {
+        "liquid": false,
+        "instacart": true,
+        "URLs": {
+            "Draeger's Market": [
+                {
+                    "URL": "https://www.instacart.com/store/items/item_531364960",
+                    "quantity": 12,
+                    "qtype": "oz",
+                    "price": 459,
+                    "preference": 1,
+                    "product_name": "Manischewitz Egg Noodles, Medium",
+                    "updated": "2022-08-01T22:51:19.852993-07:00"
+                },
+                {
+                    "URL": "https://www.instacart.com/store/items/item_531362512",
+                    "quantity": 12,
+                    "qtype": "oz",
+                    "price": 379,
+                    "preference": 2,
+                    "product_name": "Golden Grain Egg Noodles, Wide",
+                    "updated": "2022-08-01T22:51:41.285461-07:00"
+                }
+            ]
+        }
+    },
+    "roasted peanuts": {
+        "liquid": false,
+        "instacart": true,
+        "URLs": {
+            "Draeger's Market": [
+                {
+                    "URL": "https://www.instacart.com/store/items/item_531377041",
+                    "quantity": 16,
+                    "qtype": "oz",
+                    "price": 319,
+                    "preference": 1,
+                    "product_name": "Planters Lightly Salted Dry Roasted Peanuts",
+                    "updated": "2022-08-01T22:52:57.785769-07:00"
+                }
+            ]
+        }
+    },
+    "scallions": {
+        "liquid": false,
+        "instacart": false,
+        "URLs": {}
     }
 }

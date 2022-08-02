@@ -1287,5 +1287,8 @@
                 "updated": "2020-06-19 21:38:15"
             }
         }
+    },
+    "sausage": {
+        "liquid": false
     }
 }

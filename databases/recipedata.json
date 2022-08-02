@@ -5,7 +5,7 @@
                 "quantity": 1.0,
                 "qtype": "tbsp"
             },
-            "bacon": {
+            "sausage": {
                 "quantity": 16.0,
                 "qtype": "oz"
             },
@@ -952,6 +952,14 @@
             "butter": {
                 "quantity": 1.0,
                 "qtype": "cup"
+            }
+        }
+    },
+    "Indomie Spicy Ramen": {
+        "ingredients": {
+            "indomie packet": {
+                "quantity": 5.0,
+                "qtype": ""
             }
         }
     }

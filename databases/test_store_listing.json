@@ -1,0 +1,35 @@
+{
+    "fresh basil": {
+        "liquid": false,
+        "instacart": true,
+        "URLs": {
+            "stater bros": [
+                {
+                    "URL": "https://www.instacart.com/store/items/item_497524991",
+                    "quantity": 1,
+                    "qtype": "each",
+                    "price": 299,
+                    "preference": 1,
+                    "product_name": "Fresh Organic Planter's Basil",
+                    "updated": "2022-08-01T22:48:58.918815-07:00"
+                }
+            ]
+        }
+    },
+    "item not found": {
+        "liquid": false,
+        "instacart": true,
+        "URLs": {
+            "stater bros": [
+                {
+                    "updated": "2022-08-01T22:48:58.920139-07:00"
+                }
+            ]
+        }
+    },
+    "sichuan peppercorns": {
+        "liquid": false,
+        "instacart": false,
+        "URLs": {}
+    }
+}

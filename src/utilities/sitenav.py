@@ -1,9 +1,11 @@
 # Standard libraries
 import json
+import math
 import time
 from pathlib import Path
 
 # Pypi libraries
+import pendulum
 from selenium import webdriver
 from selenium.common.exceptions import NoSuchElementException, WebDriverException
 from selenium.webdriver.common.by import By
@@ -15,7 +17,7 @@ from .db import DBManager
 from .misc import askBoolean
 from .errors import InstacartError
 from ..grocerylister import generateGroceryList
-
+from ..ingredient import Ingredient
 
 
 class WebsiteController:
@@ -38,6 +40,7 @@ class WebsiteController:
         self.browser = None
         self.logged_in = False
         self.store = None
+        self.store_domain = None # Tracks what store subpage currently on - just the name of store
         self.known_store_urls = {}
         self.DBManager = DBManager()
 
@@ -213,21 +216,9 @@ class WebsiteController:
             target_store.click()
 
         time.sleep(5)
+        self.store_domain = self.store
         if self.store not in self.known_store_urls:
             self.known_store_urls[self.store] = self.browser.current_url
-
-
-    def shopAtSingleStore(self, request, store):
-        groceries = generateGroceryList(request)
-        store_listings = self.DBManager.loadStoreListingDB()
-        self.logIn()
-
-        # 
-        for ing in groceries.values():
-            # Look up ing name
-            #   If exists, go to page and add quantity
-            #   If not exists, ask for page and store in DB
-            pass
 
 
     def goToItem(self, store, item_name):
@@ -238,9 +229,73 @@ class WebsiteController:
         pass
 
 
+    def _getIngredientInfo(self, direct=False):
+        # Get write dict from ingredient
+        #   direct = True means the ingredient URL was loaded directly
+        #   direct = False means it was navigated to by clicking on an item entry (so it's a pop-up)
+
+        # Find root div with pricing and quantity info
+        if direct == False:
+            root_info_alternatives = [
+                '/html/body/div[16]/div/div/div/div[2]/div[1]/div[2]',
+                '/html/body/div[17]/div/div/div/div[2]/div[1]/div[2]',
+                '/html/body/div[18]/div/div/div/div[2]/div[1]/div[2]',
+            ]
+            root_info_element, functioning_idx = self._tryAlternatives(
+                root_info_alternatives,
+                By.XPATH,
+                [16, 17, 18],
+                purpose='root info lookup for item'
+            )
+        else:
+            root_info_element = self.find_xpath('/html/body/div[1]/div[2]/div/div/div/div/div/div[1]/div/div[2]/div[2]/div[2]/div[1]/div[2]')
+
+        # Detect type of item page
+        gettxt = lambda subpath: root_info_element.find_element(By.XPATH, subpath).text
+        currency_to_100s = lambda dollarstr: int(float(dollarstr.strip('$'))*100)
+        product_name = gettxt('div[1]/h2/span')
+        try:
+            # Vegetable/fruits: estimated weight and number quantity
+            #   https://www.instacart.com/store/items/item_565643965
+            # "$5.88 each (est.)"
+            each_est = gettxt('div[2]/div[1]/div[1]/div[1]/div[1]/span')
+            # "$14.69 / lb" or "$0.79/oz"
+            price_per_weight = gettxt('div[2]/div[1]/div[1]/div[1]/div[2]')
+
+            price_parts = price_per_weight.split('/')
+            weight_price = currency_to_100s(price_parts[0].strip())
+            each_price = currency_to_100s(each_est.split(' ')[0].strip())
+
+            quantity = round(each_price / weight_price, 0)
+            qtype = price_parts[-1]
+            price = each_price
+
+        except NoSuchElementException:
+            # Standard: product name, quantity and qtype, price, number of self
+            #   https://www.instacart.com/store/items/item_552059888
+            quantity_and_qtype = gettxt('div[1]/div[2]/span')
+            price = currency_to_100s(gettxt('div[2]/div[1]/div[1]/div/div[1]/span'))
+            number_of_self = gettxt('div[2]/div[1]/div[2]/button[1]/span/span')
+
+            qparts = quantity_and_qtype.split(' ')
+            quantity, qtype = qparts[0], ' '.join(qparts[1:])
+
+
+        write_dict = {
+            'URL': self.browser.current_url,
+            'quantity': int(quantity),
+            'qtype': qtype,
+            'price': price,
+            # 'preference': preference_counter,
+            'product_name': product_name,
+        }
+        return write_dict
+
+
     def _seekIngredientsInStore(self, ing):
         # Note: Assumes self.known_store_urls has been populated
         assert isinstance(ing, str), f'ingredient must be of type str, got {type(ing)}'
+        click_count = 1
 
         print(f'Looking up the item in {self.store}...')
 
@@ -248,8 +303,11 @@ class WebsiteController:
         if self.store not in self.known_store_urls:
             raise RuntimeError('Unable to find store landing page URL in known_store_urls')
         store_landing_url = self.known_store_urls[self.store]
-        if store_landing_url not in self.browser.current_url:
+        if self.store_domain != self.store:
             self.browser.get(store_landing_url)
+            self.store_domain = self.store
+        else:
+            click_count = 2
         time.sleep(5)
 
         # Look up in search bar
@@ -263,6 +321,16 @@ class WebsiteController:
             [1, 2],
             purpose='search box lookup'
         )
+        for i in range(click_count+1):
+            # Get search box focus, even if there's a pop-up
+            # https://stackoverflow.com/questions/48665001/can-not-click-on-a-element-elementclickinterceptedexception-in-splinter-selen
+            self.browser.execute_script('arguments[0].click();', search_box)
+        time.sleep(1)
+
+        search_box.clear()
+
+        time.sleep(1)
+
         search_box.send_keys(ing)
         search_box.send_keys(Keys.RETURN)
 
@@ -274,41 +342,10 @@ class WebsiteController:
             cprint(f'Please select your #{preference_counter} option by clicking on it, then hit ENTER here.', 'green', end='')
             input()
 
-            # Detect type of item page
-            # Standard: product name, quantity and qtype, price, number of self
-            #   https://www.instacart.com/store/items/item_552059888
-            # Vegetable/fruits: estimated weight and number quantity
-            #   https://www.instacart.com/store/items/item_565643965
-            # TODO:
+            write_dict = self._getIngredientInfo(direct=False)
+            write_dict['preference'] = preference_counter
 
             # Write item to DB automatically
-            root_info_alternatives = [
-                '/html/body/div[16]/div/div/div/div[2]/div[1]/div[2]',
-                '/html/body/div[17]/div/div/div/div[2]/div[1]/div[2]',
-                '/html/body/div[18]/div/div/div/div[2]/div[1]/div[2]',
-            ]
-            root_info_element, functioning_idx = self._tryAlternatives(
-                root_info_alternatives,
-                By.XPATH,
-                [16, 17, 18],
-                purpose='root info lookup for item'
-            )
-            product_name = root_info_element.find_element(By.XPATH, 'div[1]/h2/span').text
-            quantity_and_qtype = root_info_element.find_element(By.XPATH, 'div[1]/div[2]/span').text
-            price = root_info_element.find_element(By.XPATH, 'div[2]/div[1]/div[1]/div/div[1]/span').text
-            number_of_self = root_info_element.find_element(By.XPATH, 'div[2]/div[1]/div[2]/button[1]/span/span').text
-
-            qparts = quantity_and_qtype.split(' ')
-            quantity, qtype = qparts[0], ' '.join(qparts[1:])
-
-            write_dict = {
-                'URL': self.browser.current_url,
-                'quantity': int(quantity),
-                'qtype': qtype,
-                'price': int(float(price.strip('$'))*100),
-                'preference': preference_counter,
-                'product_name': product_name,
-            }
             self.DBManager.addURLForStoreAndIngToStoreListingDB(ing, self.store, write_dict)
             cprint('Wrote this to store listing DB:', 'blue')
             print(json.dumps(write_dict, indent=4))
@@ -318,6 +355,21 @@ class WebsiteController:
             if not ans:
                 break
             preference_counter += 1
+
+
+    def _iterateOverUnseenItems(self, groceries):
+        self.logIn()
+        self.DBManager.loadStoreListingDB() # initialized to self.store_listing_db
+
+        for ing in groceries.values():
+            if ing.name not in self.DBManager.store_listing_db:
+                ans = askBoolean(f'Unknown ingredient "{ing.name}"! Is this purchasable from instacart?')
+                if not ans:
+                    self.DBManager.addExternalItemToStoreListingDB(ing.name)
+                    continue
+                else:
+                    # Get data with user
+                    self._seekIngredientsInStore(ing.name)
 
 
     def _iterateOverHiPriItemsWithOnPageBehavior(self, groceries, behavior_fxn, *args, **kwargs):
@@ -346,8 +398,58 @@ class WebsiteController:
             self.browser.get(entry['URL'])
             time.sleep(5)
 
-        # Assume behavior fxn will handle tail waits properly
-        behavior_fxn(*args, **kwargs)
+            # Assume behavior fxn will handle tail waits properly
+            kwargs['ing'] = ing
+            behavior_fxn(*args, **kwargs)
+
+
+    def shopAtSingleStoreHighestPri(self, request, store):
+        groceries = generateGroceryList(request)
+        store_listings = self.DBManager.loadStoreListingDB()
+        self.logIn()
+
+        def shopperBehavior(*args, **kwargs):
+            ### Compute required amount of items given request
+
+            # Load entry from DB
+            request_ing = kwargs['ing']
+            sldb = self.DBManager.store_listing_db
+            entry = sldb.getHighestPri(request_ing.name, self.store)
+
+            # Compare to actual data on website and print differences
+            write_dict = self._getIngredientInfo(direct=True)
+
+            for key, new_value in write_dict.items():
+                old_value = entry[key]
+                if old_value != new_value:
+                    cprint(f'{key}: {old_value} -> {new_value}', 'yellow')
+                    # FIXME: For now, directly modify old entry. It will be written on program exit.
+                    entry[key] = new_value
+            entry['updated'] = pendulum.now().isoformat()
+
+            # Use actual data to compute required amount of items
+            # Construct ingredient from web data
+            web_ing = Ingredient(
+                request_ing.name,
+                quantity=write_dict['quantity'],
+                qtype=write_dict['qtype'],
+                liquid=request_ing.liquid,
+            )
+            n = web_ing / request_ing
+            print(f'Need {n} items...')
+            actual = math.ceil(n)
+            # FIXME: Implement div for Ingredient class
+
+            # Select quantity from drop-down
+            # TODO:
+
+            # Submit
+            # TODO:
+
+            print('Waiting forever...')
+            input()
+
+        self._iterateOverHiPriItemsWithOnPageBehavior(groceries, shopperBehavior)
 
 
     def updatePrices(self, request, timeout_days=3):
@@ -364,15 +466,5 @@ if __name__ == "__main__":
     ]
     groceries = generateGroceryList(request)
     c.goToStore('Draeger\'s Market')
-
-    def dummy():
-        pass
-
-    c._iterateOverHiPriItemsWithOnPageBehavior(groceries, dummy)
-
-    # for ing in groc.values():
-    #     print(ing)
-
-    # c.updatePrices(groc)
-
-    # c.shopAtSingleStore(request, "Draeger's Market")
+    c._iterateOverUnseenItems(groceries)
+    c.shopAtSingleStoreHighestPri(request, "Draeger's Market")

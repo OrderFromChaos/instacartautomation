@@ -108,12 +108,10 @@ class WebsiteController:
         # Handler for captcha
         if self.browser.current_url == login_url:
             # It didn't leave the page because something is blocking it - probably captcha
-            cprint('CAPTCHA detected! Please solve the captcha and press ENTER when complete.', 'red', end='')
+            cprint('CAPTCHA detected! Please solve the captcha and press ENTER upon landing page load.', 'red', end='')
             _ = input()
-
-            time.sleep(3)
-
-        time.sleep(11) # This takes forever for some reason
+        else:
+            time.sleep(11) # This takes forever for some reason
         self.logged_in = True
 
 
@@ -182,15 +180,18 @@ class WebsiteController:
 
             # Get list of stores
             store_path_alternatives = [
-                # Previously:
-                #                                            18
-                '/html/body/div[1]/div[1]/div[2]/div/div/div[19]/div/ul',
-                '/html/body/div[1]/div[2]/div[2]/div/div/div[19]/div/ul',
+                # Previous indexes:
+                #                                              18
+                #                 1
+                # '/html/body/div[1]/div[1]/div[2]/div/div/div[19]/div/ul',
+                # '/html/body/div[1]/div[2]/div[2]/div/div/div[19]/div/ul',
+
+                '/html/body/div[2]/div[1]/div[2]/div/div/div[8]/div/ul'
             ]
             store_list_obj, functioning_idx = self._tryAlternatives(
                 store_path_alternatives,
                 By.XPATH,
-                [1, 2],
+                range(len(store_path_alternatives)),
                 purpose='store name lookup'
             )
 
@@ -198,7 +199,7 @@ class WebsiteController:
             found_elt = store_list_obj.find_elements(By.TAG_NAME, 'li')
             store_idx_lookup = {}
             for idx in range(1, len(found_elt) + 1):
-                store_element = store_list_obj.find_element(By.XPATH, f'li[{idx}]/a/span/span[2]/span[1]/span')
+                store_element = store_list_obj.find_element(By.XPATH, f'li[{idx}]/div/a/div[2]/div/span')
                 store_idx_lookup[store_element.text.strip().lower()] = idx
 
             # TODO: Also gather "bulk" stores like Costco - they're not in the main grocery list
@@ -212,7 +213,7 @@ class WebsiteController:
                 for store_name, idx in store_idx_lookup.items():
                     print(idx, store_name)
                 raise RuntimeError(f'Unable to locate store "{target_name}"! Valid names are printed above ^^')
-            target_store = self.find_xpath(f'/html/body/div[1]/div[{functioning_idx}]/div[2]/div/div/div[19]/div/ul/li[{target_idx}]')
+            target_store = self.find_xpath(f'{store_path_alternatives[functioning_idx]}/li[{target_idx}]')
             target_store.click()
 
         time.sleep(5)
@@ -462,9 +463,15 @@ if __name__ == "__main__":
     expected_config_loc = Path('databases/siteconfig.json')
     c = WebsiteController(expected_config_loc)
     request = [
-        ['Dan Dan Noodles', 1]
+        ['Dan Dan Noodles', 4]
     ]
+
     groceries = generateGroceryList(request)
+
+    # # Print grocery list
+    # for i, x in groceries.items():
+    #     print(i, '|', x.quantity, x.qtype)
+
     c.goToStore('Draeger\'s Market')
     c._iterateOverUnseenItems(groceries)
-    c.shopAtSingleStoreHighestPri(request, "Draeger's Market")
+    # c.shopAtSingleStoreHighestPri(request, "Draeger's Market")
